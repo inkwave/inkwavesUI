@@ -1,0 +1,421 @@
+/* global  */
+
+/* Start Variables */
+:root {
+  --main-font-color: white;
+  --secondary-font-color: black;
+  --bg-color: #0097b2;
+  --revealing-color: #0097b2;
+  --current-color: #00bf63;
+  --section-padding: 100px;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --p-color: #777;
+  --margin: 50px;
+
+  /* Chosen pallet */
+  --yinmn-blue: #3d5a80ff;
+  --powder-blue: #98c1d9ff;
+  --light-cyan: #e0fbfcff;
+  --burnt-sienna: #ee6c4dff;
+  --gunmetal: #293241ff;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 0;
+  margin: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  font-family: "Work Sans", sans-serif;
+  font-family: "Anton", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-family: "XMYekanRegular";
+  font-weight: normal;
+  font-style: normal;
+  color: var(--main-font-color);
+  transition: 0.5s;
+  /*font-size: 100px;
+  */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: cairo;
+}
+
+p {
+  font-family: "XMYekanRegular";
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+input {
+  border : none;
+}
+section  {
+  margin: 50px 0;
+  padding: 20px 0;
+}
+.container {
+  width: 80%;
+
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none !important;
+  /* visibility: hidden; */
+  /* width: 0px; */
+  /* cant use those two last properties cause in media query when i change the display to block or flex still those tow properties will be activated marking the elements 
+  not visible and its width is zero */
+}
+
+* {
+  color: black;
+
+}
+
+
+
+/* ------------------------------------------------------------ Initiate upper page */
+.logo img {
+  height: 72px;
+  width: auto;
+}
+.sub-divs-container {
+  /* border: 1px solid red ; */
+  height: fit-content;
+  /* height: 600px; */
+}
+
+.upper-page {
+  position: relative;
+}
+
+#subsections-div {
+  position: absolute;
+  width: 100%;
+  /* padding: 20px; */
+  background-color: white;
+
+
+}
+nav ul li {
+  padding:5px 10px ;
+}
+nav ul li:hover {
+  border-bottom: 1px solid  var( --burnt-sienna); 
+}
+#subsections-div * {
+  /* color: white; */
+}
+#subsections-div div {
+  padding: 10px;
+  
+  /* color: white; */
+
+}
+
+.subsection-box  {
+  width: 300px;
+}
+
+.subsection-box a {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.subsection-box a h6 {
+  padding: 0%;
+  margin: 0;
+}
+.subsection-box-img{
+  width: 270px;
+  height: 137px;
+} 
+.subsection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* not space between to not leave big spaces between less numbered elements */
+}
+
+
+/* ----------------- Initial Sign Form ----------------- */
+#sign-modal {
+  width: 60vw;
+  height: 70vh;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: white;
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.close-modal-icon {
+  font-size: 20px;
+  color: white !important;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.close-modal-icon:hover {
+  cursor: pointer;
+  color: red;
+}
+#sign-side {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+}
+.sign-side-holder {
+  width: 70%;
+
+}
+#sign-in-up-buttons , #sign-in-with-buttons, #sign-up-with-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+#sign-in-up-buttons  button:first-child ,
+#sign-in-with-buttons button:first-child ,
+#sign-up-with-buttons
+button:first-child {
+  flex: 1;
+}
+#sign-in-up-buttons button:last-child {
+  flex: 1;
+}
+
+#sign-side .sign-windows {
+
+/* background-color: red; */
+}
+.sign-form {
+  display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.sign-form input {
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.sign-buttons  {
+  padding : 7px ;
+  border: none;
+  margin: 2px;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.or-use {
+  margin: 5px 0;
+  /* width: fit-content; */
+  /* background-color: white; */
+  position : relative;
+  text-align: center;
+  
+}
+.line {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height:1px;
+  /* background-color: #eee; */
+  background-color: #c4b6b66c;
+  top: 50%;
+ /*  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%); */
+  /* z-index: -1003 */
+}
+.line-r {
+  left: 60%;
+}
+.line-l {
+  left: 0%;
+}
+
+#details-side {
+  padding: 10px;
+  flex: 1;
+  border-left: 2px solid #eee;
+  background-color: var(--burnt-sienna);
+  border-radius: 0 15px 15px 0;
+  -webkit-border-radius: 0 15px 15px 0;
+  -moz-border-radius: 0 15px 15px 0;
+  -ms-border-radius: 0 15px 15px 0;
+  -o-border-radius: 0 15px 15px 0;
+}
+
+/* ----------------- Initiate service advantages ----------------- */
+section#our-printing-advantages  {
+  background-color: #f3f4f6;
+}
+#our-printing-advantages .container {
+display: grid;
+grid-template-columns: repeat(3 ,380px);
+justify-content: space-between;
+row-gap: 10px;
+
+}
+.advantage-box {
+width: 376;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.advantage-box-img {
+  width: 100%;
+  height: 188px;
+}
+
+.advantage-box-details  {
+  padding: 10px;
+}
+.advantage-box-details p {
+  font-size: 14px;
+}
+
+
+
+
+/* ----------------- Initial Footer ----------------- */
+footer {
+  background-color: var(--yinmn-blue);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer *:not(.subfooter) {
+  color: white;
+}
+footer .container {
+  /* background-color: var(--gunmetal) ; */
+  height: fit-content;
+  /* margin: auto; */
+  display: flex;
+  align-items: start;
+
+
+}
+.left-footer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: start;
+  height: 100%;
+  flex: 1;
+
+
+}
+
+
+.footer-list {
+  flex-wrap: wrap!important;
+}
+.footer-list li {
+/* width: 50px; */
+}
+
+.fa-app-store-ios, .fa-google-play {
+font-size: 60px;
+}
+
+.middle-footer {
+  flex : 1;
+  display: grid;
+}
+.middle-footer ul {
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+
+}
+.right-footer {
+  flex : 1;
+}
+.upper-right-footer ul {
+  flex-wrap: wrap;
+}
+
+.subfooter {
+  
+}
+
+.subfooter .container  {
+  color: red;
+  
+  width: 400px; 
+}
+
