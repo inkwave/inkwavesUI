@@ -37,15 +37,19 @@
 
     <!-- ---------------------------------------------------------------Initiate Sign Modal window -->
     <div id="sign-modal" class="hidden">
-        <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon"></button>
+        <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon hidden"></button>
         <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
         <div id="sign-side">
+            <div class="sign-modal-internal-overlay hidden"></div>
 
-            <div class="sign-side-holder">
-                <div id="sign-in-up-buttons" class=" my-3"> <button class="sign-buttons  sign-in-btn"> Sign in
-                    </button><button class="sign-buttons sign-up-btn"> Sign up </button></div>
+
+            <div class="sign-side-holder hidde">
+                <div id="sign-in-up-buttons" class=" my-3">
+                    <button class="sign-buttons sign-in-btn activeBtn"> Sign in
+                    </button><button class="sign-buttons sign-up-btn"> Sign up </button>
+                </div>
                 <div class="sign-windows">
-                    <form action="" class="sign-up-form sign-form hidden" ; onsubmit="reset() ;return false">
+                    <form action="" class="sign-up-form sign-form hidden" ; onsubmit=" reset() ;return false">
                         <input type="text" placeholder="First name">
                         <input type="text" placeholder="Lase name">
                         <label for="">
@@ -55,11 +59,16 @@
                             <label for="female-radio" style="font-size: 12px;"> Female </label>
                             <input type="radio" id="female-radio">
                         </label>
-                        <input type="phone" placeholder="Phone number" >
+                        <input type="phone" placeholder="Phone number">
                         <input type="email" placeholder="E-mail" autocomplete="username">
                         <input type="password" placeholder="Password" autocomplete="new-password">
                         <input type="password" placeholder="Confirm Password" autocomplete="new-password">
-                        <button type="submit" class="sign-up-submit sign-buttons btn btn-primary">Sign Up</button>
+                        <div class="privacy-agreement">
+                            By signing up you commit that you read and agreed with our <a href="" target="_blank">
+                                privacy </a> and <a href="" target="_blank"> policy </a>
+                        </div>
+                        <input type="submit" value="Sign up" class="sign-up-submit sign-buttons btn btn-primary" >
+                        </input>
 
                     </form>
                     <form action="" class="sign-in-form sign-form" onsubmit=" reset() ;return false">
@@ -70,12 +79,13 @@
                         <input type="password" placeholder="Password" autocomplete="current-password">
                         <div class="remember-me">
                             <label>
-                                <input type="checkbox" name="" >
+                                <input type="checkbox" name="">
                                 Remember me
                             </label>
                             <a href="reset-password.html"> <span> Forgot password? </span></a>
                         </div>
-                        <button type="submit" class="sign-up-submit sign-buttons btn btn-primary">Sign in</button>
+                        <input type="submit" value="Sign in"
+                            class="sign-up-submit sign-buttons btn btn-primary"></input>
 
                     </form>
                     <p class="or-use"> Or use <span class="line-l line"></span> <span class="line-r line"></span>
@@ -95,12 +105,24 @@
             </div>
         </div>
         <div id="details-side" class="d-flex justify-content-center align-items-center">
-            <a href="index.html" class="logo w-75 h-75">
+            <a href="index.html" class="logo w-75 h-75  modal-logo">
                 <div class="logo w-100 h-100"><img class="w-100 h-100" src="./assets/media/images/logo.ng.png"
                         alt="ink waves logo">
                 </div>
-
             </a>
+            <form action="" class="enter-ur-mail sign-form hidden">
+                <h4 class ='ur-mail-header'>Insert Your Mail </h4>
+                <input type="email" placeholder="E-mail" autocomplete="username">
+                <input type="submit" value="Send" class="btn btn-primary send">
+            </form>
+            <div class="activation-code hidden" >
+                <p> We have sent you a code, please insert it</p>
+                <input type="number" name="" id="">
+                <input type="submit" value="Submit" class = " submit-code btn btn-primary">
+                <p class ="m-0"> You should receive a code within  </p>
+                <span class = "timer"> Time </span>
+                <button class="Send-another-btn btn btn-primary" disabled> Send another</button>
+            </div>
 
             <!--             <div class="details-box"> This is a details box </div>
             <div class="details-box"> This is a details box </div>
@@ -141,8 +163,8 @@
                     </div>
                     <i class="fa-solid fa-cart-shopping"></i>
                     <i class="fa-solid fa-bookmark"></i>
-                    <button class="header-sign-btns" id="header-sign-in-btn"> Sign up</button>
-                    <button class="header-sign-btns" id="header-sign-up-btn"> Sign in</button>
+                    <button class="header-sign-btns" id="header-sign-in-btn"> Sign in</button>
+                    <button class="header-sign-btns" id="header-sign-up-btn"> Sign up</button>
                 </div>
 
             </div>
@@ -332,7 +354,16 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- For eahc book get the book name go get that image of the same name and assign it as a background image  -->
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -340,7 +371,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -348,7 +379,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -356,7 +387,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -364,7 +395,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -372,7 +403,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -380,7 +411,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -388,7 +419,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -396,7 +427,7 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
@@ -404,21 +435,13 @@
                         <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
                         <div class="book-details">
                             <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p> 
+                            <p class="book-category">adventure</p>
                             <span class="book-price"> 120 <span class="currency">LE</span> </span>
                         </div>
                     </div>
                 </div>
                 <div class="position-changer">
-                    <input  id = "books-slider-range-Input" type="range"  min = "0" step="100" >
+                    <input id="books-slider-range-Input" type="range" min="0" step="100">
                     <div class="carousel-arrows hidden">
                         <span class="left-arrow"><i class="fa-solid fa-caret-left"></i></span>
                         <span class="right-arrow"><i class="fa-solid fa-caret-right"></i></span>
