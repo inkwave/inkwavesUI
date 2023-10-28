@@ -29,185 +29,80 @@
 </head>
 
 <body>
-     <!--  Initiate header and navbar  -->
-     <div class="upper-page container">
-        <div class="header d-flex justify-content-between align-items-center my-2">
-
-            <a href="index.html" onclick="goHome()">
-                <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
-                    <h6 class="d-inline">Ink Waves</h6>
-                </div>
-            </a>
-            <div class="header-content"> This is a search bar 
-                <button class="header-sign-btns" id = "header-sign-in-btn"> Sign up</button>
-            <button class="header-sign-btns" id = "header-sign-up-btn"> Sign in</button>
-            </div>
-            
-        </div>
-        <nav>
-            <ul class="d-flex px-0 justify-content-around align-items-center my-0">
-                <a href="" id="a-1" class="listitem">
-                    <li> Print </li>
-                </a>
-                <a href="" id="a-2" class="listitem">
-                    <li>Book store</li>
-                </a>
-                <a href="" id="a-3" class="listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-4" class="listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-5" class="listitem">
-                    <li> Privacy and </li>
-                </a>
-                <a href="" id="a-6" class="listitem">
-                    <li>About Ink Waves</li>
-                </a>
-            </ul>
-        </nav>
-        <div id="subsections-div" class="sub-divs-container hidde width-100% ">
-            <div id="subsection-1" class="subsection">
-                <div class="subsection-box">
-                    <a href="">
-                        <img src="https://www.moo.com/dam/jcr:c8419547-19e3-4da6-9c62-e9b5bb3428cc/0603WF-Eco-Paper-Launch-TR-752x376-Paper-Stack0.jpg"
-                            alt="" class="subsection-box-img">
-                        <h6>Box Title </h6>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestias assumenda autem!
-                            Molestiae, dicta in veniam quasi autem libero ipsum </p>
-                    </a>
-
-                </div>
-                <div class="subsection-box">
-                    <a href="">
-                        <img src="https://www.moo.com/dam/jcr:c8419547-19e3-4da6-9c62-e9b5bb3428cc/0603WF-Eco-Paper-Launch-TR-752x376-Paper-Stack0.jpg"
-                            alt="" class="subsection-box-img">
-                        <h6>Box Title </h6>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestias assumenda autem!
-                            Molestiae, dicta in veniam quasi autem libero ipsum </p>
-                    </a>
-
-                </div>
-                <div class="subsection-box">
-                    <a href="">
-                        <img src="https://www.moo.com/dam/jcr:c8419547-19e3-4da6-9c62-e9b5bb3428cc/0603WF-Eco-Paper-Launch-TR-752x376-Paper-Stack0.jpg"
-                            alt="" class="subsection-box-img">
-                        <h6>Box Title </h6>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestias assumenda autem!
-                            Molestiae, dicta in veniam quasi autem libero ipsum </p>
-                    </a>
-
-                </div>
-                <div class="subsection-box">
-                    <a href="">
-                        <img src="https://www.moo.com/dam/jcr:c8419547-19e3-4da6-9c62-e9b5bb3428cc/0603WF-Eco-Paper-Launch-TR-752x376-Paper-Stack0.jpg"
-                            alt="" class="subsection-box-img">
-                        <h6>Box Title </h6>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestias assumenda autem!
-                            Molestiae, dicta in veniam quasi autem libero ipsum </p>
-                    </a>
-
-                </div>
-                <div class="subsection-box">
-                    <a href="">
-                        <img src="https://www.moo.com/dam/jcr:c8419547-19e3-4da6-9c62-e9b5bb3428cc/0603WF-Eco-Paper-Launch-TR-752x376-Paper-Stack0.jpg"
-                            alt="" class="subsection-box-img">
-                        <h6>Box Title </h6>
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat molestias assumenda autem!
-                            Molestiae, dicta in veniam quasi autem libero ipsum </p>
-                    </a>
-
-                </div>
-            </div>
-            <div id="subsection-2" class="subsection">
-                this is subsection 2
-            </div>
-            <div id="subsection-3" class="subsection">
-                this is subsection 3
-            </div>
-            <div id="subsection-4" class="subsection">
-                this is subsection 4
-            </div>
-            <div id="subsection-5" class="subsection">
-                this is subsection 5
-            </div>
-            <div id="subsection-6" class="subsection">
-                this is subsection 6
-            </div>
-
-        </div>
-    </div>
-<div id="landing-page">
-    
-   
-    <!-- ---------------------------------------------------------------Initiate hero section -->
-    <section class="hero">
-        <img src="https://www.moo.com/dam/jcr:62e34a02-995e-4482-a7b0-1296ab7dec48/0599WF-October-Campaign-2023-HP-1920x530-Holiday-Products.jpg"
-            alt="">
-    </section>
 
 
-    <!-- ---------------------------------------------------------------Initiate Sign up Modal window -->
-    <div id="sign-modal" class = "hidden">
-            <i  id = "close-icon" class="fa-solid fa-circle-xmark close-modal-icon" onclick="close()"></i>
+
+
+    <div class="body-overlay hidden"></div>
+
+    <!-- ---------------------------------------------------------------Initiate Sign Modal window -->
+    <div id="sign-modal" class="hidden">
+        <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon"></button>
+        <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
         <div id="sign-side">
 
-           <div class="sign-side-holder">
-            <div id="sign-in-up-buttons" class =" my-3"> <button class = "sign-buttons  sign-in-btn"> Sign in </button><button class = "sign-buttons sign-up-btn"> Sign up </button></div>
-            <div class="sign-windows">
-                <form action="" class ="sign-up-form sign-form hidden" >
-                     <input type="text" placeholder="First name">
-                     <input type="text"  placeholder="Lase name">
-                     <label for="">
-                         <h6>Gender</h6>
-                         <label for="male-radio" style ="font-size: 12px;"> Male </label>
-                         <input type="radio" id = "male-radio">
-                         <label for="female-radio" style ="font-size: 12px;"> Female </label>
-                         <input type="radio" id = "female-radio">
+            <div class="sign-side-holder">
+                <div id="sign-in-up-buttons" class=" my-3"> <button class="sign-buttons  sign-in-btn"> Sign in
+                    </button><button class="sign-buttons sign-up-btn"> Sign up </button></div>
+                <div class="sign-windows">
+                    <form action="" class="sign-up-form sign-form hidden" ; onsubmit="reset() ;return false">
+                        <input type="text" placeholder="First name">
+                        <input type="text" placeholder="Lase name">
+                        <label for="">
+                            <h6>Gender</h6>
+                            <label for="male-radio" style="font-size: 12px;"> Male </label>
+                            <input type="radio" id="male-radio">
+                            <label for="female-radio" style="font-size: 12px;"> Female </label>
+                            <input type="radio" id="female-radio">
                         </label>
-                        <input type="phone" placeholder="Phone number">
-                        <input type="email" placeholder="E-mail">
-                        <input type="password" placeholder="Password">
-                        <input type="password"  placeholder="Confirm Password">
-                        <button type="submit" class = "sign-up-submit sign-buttons btn btn-primary" >Sign Up</button> 
-                       
+                        <input type="phone" placeholder="Phone number" >
+                        <input type="email" placeholder="E-mail" autocomplete="username">
+                        <input type="password" placeholder="Password" autocomplete="new-password">
+                        <input type="password" placeholder="Confirm Password" autocomplete="new-password">
+                        <button type="submit" class="sign-up-submit sign-buttons btn btn-primary">Sign Up</button>
+
                     </form>
-                    <form action="" class ="sign-in-form sign-form " >
-                        
+                    <form action="" class="sign-in-form sign-form" onsubmit=" reset() ;return false">
+
                         <h3> Welcome back </h3>
                         <p> Nice to see you again </p>
-                        <input type="email" placeholder="E-mail">
-                        <input type="password" placeholder="Password">
-                      <div class="remember-me">
-                        <label >
-                            <input type="checkbox" name="" id="">
-                            Remember me
-                        </label>
-                        <a href="reset-password.html"> <span> Forgot password? </span></a>
-                      </div>
-                        <button type="submit" class = "sign-up-submit sign-buttons btn btn-primary" >Sign in</button> 
+                        <input type="email" placeholder="E-mail" autocomplete="username">
+                        <input type="password" placeholder="Password" autocomplete="current-password">
+                        <div class="remember-me">
+                            <label>
+                                <input type="checkbox" name="" >
+                                Remember me
+                            </label>
+                            <a href="reset-password.html"> <span> Forgot password? </span></a>
+                        </div>
+                        <button type="submit" class="sign-up-submit sign-buttons btn btn-primary">Sign in</button>
 
-                 </form>
-                 <p  class = "or-use"> Or use  <span class = "line-l line"></span> <span class = "line-r line"></span></p>
-                 <div id="sign-up-with-buttons" class =" my-3">
-                    <button class = "sign-buttons "> 
-                        <img width="25" height="25" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo"/>
-                        Google
-                    </button>
-                    <button class = "sign-buttons "> 
-            <img width="25" height="25" src="https://img.icons8.com/color/48/facebook-circled--v1.png" alt="facebook-circled--v1"/>
-            Facebook </button></div>
-            </div>
-           </div>
-        </div >
-        <div id="details-side" class = "d-flex justify-content-center align-items-center">
-            <a href="index.html" class="logo w-50 h-50">
-                <div class="logo w-100 h-100"><img class = "w-100 h-100" src="./assets/media/images/logo.ng.png" alt="ink waves logo">
+                    </form>
+                    <p class="or-use"> Or use <span class="line-l line"></span> <span class="line-r line"></span>
+                    </p>
+                    <div id="sign-up-with-buttons" class=" my-3">
+                        <button class="sign-buttons ">
+                            <img width="25" height="25" src="https://img.icons8.com/color/48/google-logo.png"
+                                alt="google-logo" />
+                            Google
+                        </button>
+                        <button class="sign-buttons ">
+                            <img width="25" height="25" src="https://img.icons8.com/color/48/facebook-circled--v1.png"
+                                alt="facebook-circled--v1" />
+                            Facebook </button>
+                    </div>
                 </div>
-               
+            </div>
+        </div>
+        <div id="details-side" class="d-flex justify-content-center align-items-center">
+            <a href="index.html" class="logo w-75 h-75">
+                <div class="logo w-100 h-100"><img class="w-100 h-100" src="./assets/media/images/logo.ng.png"
+                        alt="ink waves logo">
+                </div>
+
             </a>
 
-<!--             <div class="details-box"> This is a details box </div>
+            <!--             <div class="details-box"> This is a details box </div>
             <div class="details-box"> This is a details box </div>
             <div class="details-box"> This is a details box </div>
             <div class="details-box"> This is a details box </div>
@@ -218,176 +113,749 @@
         </div>
     </div>
 
-    <!-- ------------------------------------------------------------ Initiate Printing Services description ------------------------------------------->
-<section id="our-printing-advantages">
-   <div class="container">
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/91378ec4-5460-4dc6-bbf5-e65b941858e8/CRB-5326-Printfinity-tile-752x376.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/2cbbb991-35c2-4e17-9772-0662a558e045/PC-Mixed-Media-MOOPromise-752X3760.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/233d8bf2-9791-4216-ac17-87e66def737c/PC-Mixed-Media-ShortPrintruns-752X3760.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-   
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/91378ec4-5460-4dc6-bbf5-e65b941858e8/CRB-5326-Printfinity-tile-752x376.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/2cbbb991-35c2-4e17-9772-0662a558e045/PC-Mixed-Media-MOOPromise-752X3760.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-    <div class="advantage-box">
-        <img class = "advantage-box-img" src="https://www.moo.com/.imaging/scale/dam/233d8bf2-9791-4216-ac17-87e66def737c/PC-Mixed-Media-ShortPrintruns-752X3760.jpg" alt="advantage description image">
-        <div class="advantage-box-details">
-            <h5>The ability to control the prints</h5>
-            <p>Print a different image or full color on the back of every single card at no extra cost for even more creative Postcards.</p>
-        </div>
-    </div>
-   
-   </div>
-</section>
-
-  <!-- ------------------------------------------------------------ Initiate Reset password ------------------------------------------->
-    <div id="reset-pass" class = "hidden">
-
-        <h1> Forgotten your password? No worries</h1>
-        <h4> Just Enter a new one and confirm it then you are ready to go</h4>
-
-        <form action="" class ="sign-in-form sign-form " >
-                        
-            <h3> Welcome back </h3>
-            <p> Nice to see you again </p>
-            <input type="email" placeholder="E-mail">
-            <input type="password" placeholder="Password">
-          <div class="remember-me">
-            <label >
-                <input type="checkbox" name="" id="">
-                Remember me
-            </label>
-            <a href="reset-password.html"> <span> Forgot password? </span></a>
-          </div>
-            <button type="submit" class = "sign-up-submit sign-buttons btn btn-primary" >Sign in</button> 
-
-     </form>
-    </div>
 
 
-</div>
 
 
-<footer>
-    <div class="container">
 
-        <div class="left-footer">
-            <div class="left-footer-logo">
-                <a href="index.html">
+
+
+
+
+    <!--  Initiate header and navbar  -->
+    <div class="background-opacity hidden"></div>
+    <div class="upper-page">
+        <div class="container">
+            <div class="header ">
+
+                <a href="index.html" onclick="goHome()">
                     <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
+                        <span style="font-family:  cairo; font-weight: bold; color: rgb(17, 78, 114);">InkWaves</span>
+
                     </div>
                 </a>
-                <p> We provide best printing and book selling service </p>
+                <div class="header-content">
+                    <div class="search">
+                        <input type="search" placeholder="Search" class="search-bar">
+                        <!-- <i id = "glass-icon" class="fa-solid fa-magnifying-glass search-icon"></i> -->
+                    </div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-bookmark"></i>
+                    <button class="header-sign-btns" id="header-sign-in-btn"> Sign up</button>
+                    <button class="header-sign-btns" id="header-sign-up-btn"> Sign in</button>
+                </div>
+
             </div>
-            <div class="left-footer-details">
-                <h6>Get our app on</h6>
-                <a href=""><i class="fa-brands fa-app-store-ios me-4"></i></a>
-                <a href=""><i class="fa-brands fa-google-play"></i></a>
-            </div>
-        </div>
-
-        <div class="middle-footer ">
-            <ul class=" footer-list">
-                <a href="" id="a-1" class="footer-listitem">
-                    <li> Print </li>
-                </a>
-                <a href="" id="a-2" class="footer-listitem">
-                    <li>Book store</li>
-                </a>
-                <a href="" id="a-3" class="footer-listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-4" class="footer-listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-5" class="footer-listitem">
-                    <li> Privacy and </li>
-                </a>
-                <a href="" id="a-6" class="footer-listitem">
-                    <li>About Ink Waves</li>
-                </a>
-                <a href="" id="a-1" class="footer-listitem">
-                    <li> Print </li>
-                </a>
-                <a href="" id="a-2" class="footer-listitem">
-                    <li>Book store</li>
-                </a>
-                <a href="" id="a-3" class="footer-listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-4" class="footer-listitem">
-                    <li>Listitem</li>
-                </a>
-                <a href="" id="a-5" class="footer-listitem">
-                    <li> Privacy and </li>
-                </a>
-                <a href="" id="a-6" class="footer-listitem">
-                    <li>About Ink Waves</li>
-                </a>
-            </ul>
-        </div>
-        <div class="right-footer">
-
-            <h3> Our vision</h3>
-            <p>Our mission is to be the leading digital marketplace in Africa, providing a platform for businesses
-                of all sizes to reach</p>
-            <p>Our mission is to be the leading digital marketplace for independent publishers, providing them with
-                a platform to reach customers world</p>
-        </div>
-
-
-
-    </div>
-    <div class="subfooter d-flex justify-content-center align-items-center flex-column" style="height: 50px;">
-        <div class="container d-flex justify-content-center align-items-center flex-column">
-            <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
-                <li> <a href="https://www.facebook.com/Alphauseracc" target="_blank"> <i
-                            class="fa-brands fa-facebook"></i>
-                    </a></li>
-                <li> <a href="mailto:amduseracc@gmail.com" target="_blank"> <i class="fa-solid fa-at"></i> </a>
-                </li>
-                <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
-                            style='font-weight:600;'></i>
-                    </a></li>
-                <li> <a href="tel:+201555807058" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
-                    </a></li>
-                <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i class="fa-brands fa-github"></i>
+            <nav class="navbar">
+                <ul class="">
+                    <a href="" id="a-1" itemName="print" class="listitem">
+                        <li> Print </li>
                     </a>
-                </li>
-                <li><a href="https://linktr.ee/ahmadhaseeb"> <i class="fa-solid fa-tree"></i></a></li>
-            </ul>
-            <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
+                    <a href="" id="a-2" itemName="book-store" class="listitem">
+                        <li>Book store</li>
+                    </a>
+                    <a href="reset-password.html" itemName="3" id="a-3" class="listitem">
+                        <li>Reset pass</li>
+                    </a>
+                    <a href="update-pass.html" itemName="3" id="a-3" class="listitem">
+                        <li>update pass</li>
+                    </a>
+                    <a href="" id="a-4" itemName="4" class="listitem">
+                        <li>Listitem</li>
+                    </a>
+                    <a href="" id="a-5" itemName="privacy-and-conditions" class="listitem">
+                        <li> Privacy and </li>
+                    </a>
+                    <a href="" id="a-6" itemName="about" class="listitem">
+                        <li>About Ink Waves</li>
+                    </a>
+                </ul>
+            </nav>
+            <div id="subsections-div" class="sub-divs-container hidde width-100% ">
+                <div id="subsection-print" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="subsection-book-store" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="subsection-privacy-and-conditions" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="subsection-about" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="subsection-4" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+                <div id="subsection-5" class="subsection">
+                    <div class="sub-links">
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                        <p class="sub-link"> Here is the sublink</p>
+                    </div>
+                    <div class="boxes-side">
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                            <p class="box-description"> this is a short description</p>
+                        </a>
+                        <a href="" class="box">
+                            <h6 class="box-title">Box Title </h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="landing-page">
+
+
+        <!-- ---------------------------------------------------------------Initiate hero section -->
+        <section class="hero" sectionOf="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h3>All your printing and book selling services <br>in one place</h3>
+                    <p class="hero-description">
+                        Find the best selling books or Print one along with printing all your sheets with multiple
+                        options satisfying all of your needs.
+                    </p>
+                    <button id="book-store-btn" class="hero-service-btn">Book Store</button>
+                    <button id="print-now-btn" class="hero-service-btn"> Print Now</button>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="hero-nav-container">
+            <ul class="hero-nav container">
+                <li style="font-family:  cairo; font-weight: bold; color: cadetblue;">InkWaves</li>
+                <!-- List items appended dynamically -->
+            </ul>
+        </div>
+
+
+        <!-- ---------------------------------------------------------------Initiate Recent books-->
+        <section class="recent-books section" sectionOf="recent-books" sectionTitle="Recent books">
+            <div class="container">
+                <div class="section-header">
+                    <h3> Recently added books</h3>
+                </div>
+                <div class="books-holder">
+                    <span class="left-arrow slider-arrow slider-l-arrow"><i class="fa-solid fa-caret-left"></i></span>
+                    <span class="right-arrow slider-arrow slider-r-arrow"><i class="fa-solid fa-caret-right"></i></span>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
+                        <div class="book-details">
+                            <h5 class="book-title">The hunger games</h5>
+                            <p class="book-category">adventure</p> 
+                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-changer">
+                    <input  id = "books-slider-range-Input" type="range"  min = "0" step="100" >
+                    <div class="carousel-arrows hidden">
+                        <span class="left-arrow"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="right-arrow"><i class="fa-solid fa-caret-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ------------------------------------------------------------ Initiate Printing Services description ------------------------------------------->
+        <section id="our-printing-advantages" class="section" sectionOf="printing-advantages"
+            sectionTitle="Printing advantages">
+            <div class="container ">
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/91378ec4-5460-4dc6-bbf5-e65b941858e8/CRB-5326-Printfinity-tile-752x376.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/2cbbb991-35c2-4e17-9772-0662a558e045/PC-Mixed-Media-MOOPromise-752X3760.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/233d8bf2-9791-4216-ac17-87e66def737c/PC-Mixed-Media-ShortPrintruns-752X3760.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/91378ec4-5460-4dc6-bbf5-e65b941858e8/CRB-5326-Printfinity-tile-752x376.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/2cbbb991-35c2-4e17-9772-0662a558e045/PC-Mixed-Media-MOOPromise-752X3760.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+                <div class="advantage-box">
+                    <img class="advantage-box-img"
+                        src="https://www.moo.com/.imaging/scale/dam/233d8bf2-9791-4216-ac17-87e66def737c/PC-Mixed-Media-ShortPrintruns-752X3760.jpg"
+                        alt="advantage description image">
+                    <div class="advantage-box-details">
+                        <h6>The ability to control the prints</h6>
+                        <p>Print a different image or full color on the back of every single card at no extra cost for
+                            even more creative Postcards.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------------ Initiate Printing options------------------------------------------->
+
+        <section class="printing-options section" sectionOf="printing-options" sectionTitle="Printing options">
+            <div class="container narrower-container">
+                <div class="section-header">
+                    <h2>Printing Options</h2>
+                    <p>We offers many printing options on different paper sizes and types. It also provides printing
+                        several types of packaging to suit the needs of customers. With this tool, you can see the
+                        available options. To find out the prices, register and add the file, and the best prices will
+                        appear for you according to your city.</p>
+                </div>
+                <div class="options-holder">
+                    <div class="options-category">
+                        <h5>Paper Size</h5>
+                        <div class="category-options">
+                            <button class="option-btn paper-size-option-btn " text="A5"> A5 </button><button
+                                class="option-btn paper-size-option-btn active-option-btn" text="A4">A4</button><button
+                                class="option-btn paper-size-option-btn" text="A3">A3</button><button
+                                class="option-btn paper-size-option-btn" text="A2">A2</button><button
+                                class="option-btn paper-size-option-btn" text="A1">A1</button><button
+                                class="option-btn paper-size-option-btn" text="A0">A0</button>
+                        </div>
+
+                    </div>
+                    <div class="options-category paper-type">
+                        <h5>Paper type</h5>
+                        <div class="category-options">
+                            <button class="option-btn active-option-btn "> Normal </button><button class="option-btn">
+                                Glossy</button><button class="option-btn">Sticker</button><button
+                                class="option-btn">Thick</button>
+
+                        </div>
+
+                    </div>
+                    <div class="options-category printing-color">
+                        <h5>Printing Color</h5>
+                        <div class="category-options">
+                            <button class="option-btn active-option-btn"> Black </button> <button
+                                class="option-btn">Color</button>
+                        </div>
+
+                    </div>
+
+                    <div class="options-category printing-layout">
+                        <h5>Printing Layout</h5>
+                        <div class="category-options printing-layout-options">
+                            <img src="./assets/media/images/printing options/label (1).png" alt="printing layout 1">
+                            <img src="./assets/media/images/printing options/label (2).png" alt="printing layout 2">
+                            <img src="./assets/media/images/printing options/label (3).png" alt="printing layout 3">
+                            <img src="./assets/media/images/printing options/label (4).png" alt="printing layout 4">
+                            <img src="./assets/media/images/printing options/label (5).png" alt="printing layout 5">
+                        </div>
+
+                    </div>
+
+                    <div class="options-category printing-side">
+                        <h5>Printing side</h5>
+                        <div class="category-options">
+                            <button class="option-btn active-option-btn"> 1-Side </button> <button
+                                class="option-btn">2-Sided</button>
+                        </div>
+
+                    </div>
+                    <div class="options-category">
+                        <h5>Binding Option</h5>
+                        <div class="category-options binding-options">
+                            <div class="binding-option A4 A5 A3 A2 A1 A0">
+                                <img src="./assets/media/images/binding options/no-binding.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">No binding</h6> <span> Unlimited pages </span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4">
+                                <img src="./assets/media/images/binding options/plastic-sleevs.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Plastic sleeves</h6> <span> 1 - 50 pages </span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5 A3">
+                                <img src="./assets/media/images/binding options/corner-stapled.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Corner stapled</h6> <span> 2 - 100 pages</span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5">
+                                <img src="./assets/media/images/binding options/side-stapled.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Side stapled</h6> <span> 2 - 100 pages</span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5">
+                                <img src="./assets/media/images/binding options/wire.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Wire</h6> <span>2 - 300 pages </span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5">
+                                <img src="./assets/media/images/binding options/spiral.png" alt="" style="
+                                    margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Spiral</h6> <span>10 - 200 pages</span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5">
+                                <img src="./assets/media/images/binding options/stiched.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Stiched binding</h6> <span> 100 - 600 pages</span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4 A5">
+                                <img src="./assets/media/images/binding options/velo.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Velo</h6> <span>15-200 pages </span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4">
+                                <img src="./assets/media/images/binding options/strip.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0">Strip</h6> <span> 10-100 pages </span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4">
+                                <img src="./assets/media/images/binding options/2-ring.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0"> 2-ring </h6> <span> 1-500 pages</span>
+                                </div>
+                            </div>
+                            <div class="binding-option A4">
+                                <img src="./assets/media/images/binding options/3-ring.png" alt=""
+                                    style="margin-bottom: 2p5;">
+                                <div class="binding-option-title">
+                                    <h6 class="my-0"> 3-ring</h6> <span>1-600 pages </span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------ Initiate How I Print------------------------------------------->
+
+
+        <section class="how-i-print" sectionOf="how-i-print" sectionTitle="How i print?">
+            <div class="container">
+                <img class="printing-steps-img" src="./assets/media/images/pseudo.png" alt="">
+                <div class="printing-steps">
+                    <h1>How I Print ?</h1>
+                    <h5>Get the job done in 4 steps</h5>
+                    <div class="steps">
+
+                        <div class="step">
+                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <div class="step-instructions">
+                                <h5> Upload your document</h5>
+                                <p>Login to your account after signing up and upload your PDF document to be printed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <div class="step-instructions">
+                                <h5>Select Printing Option</h5>
+                                <p>Select printing options like type of printing, colors, type of binding and delivery
+                                    option.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <div class="step-instructions">
+                                <h5>Make Your Order</h5>
+                                <p>Place your order securely using your Visa Card, Master Card or your Print Wallet.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <div class="step-instructions">
+                                <h5>Get Your Documents</h5>
+                                <p>Get your documents delivered to you by any of the delivery options offered on the
+                                    website.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------------ Initiate Reset password ------------------------------------------->
+        <div id="reset-pass" class="hidden">
+
+            <h1> Forgotten your password? No worries</h1>
+            <h4> Just Enter a new one and confirm it then you are ready to go</h4>
+
+            <form action="" class="sign-in-form sign-form ">
+
+                <h3> Welcome back </h3>
+                <p> Nice to see you again </p>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Password">
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        Remember me
+                    </label>
+                    <a href="reset-password.html"> <span> Forgot password? </span></a>
+                </div>
+                <button type="submit" class="sign-up-submit sign-buttons btn btn-primary">Sign in</button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+    <!-- ------------------------------------------------------------ Initiate publish ------------------------------------------->
+    <section class="publish" sectionOf="publish">
+
+    </section>
+    <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
+    <section class="talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
+        <div class="container">
+            <h4> Get to Know us more </h4>
+            <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>
+                <span class="talk-or-sign"> Talk with us know</span> to get to know more about what we can provide.
+            </p>
+            <div class="buttons "><button class=""> Check our service </button><button class="">Talk with us</button>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------------------------------------------------ Initiate Footer------------------------------------------->
+
+    <footer>
+        <div class="container">
+
+            <div class="left-footer">
+                <div class="left-footer-logo">
+                    <a href="index.html">
+                        <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
+                        </div>
+                    </a>
+                    <p> We provide best printing and book selling service </p>
+                </div>
+                <div class="left-footer-details">
+                    <h6>Get our app on</h6>
+                    <a href=""><i class="fa-brands fa-app-store-ios me-4"></i></a>
+                    <a href=""><i class="fa-brands fa-google-play"></i></a>
+                </div>
+            </div>
+
+            <div class="middle-footer ">
+                <ul class=" footer-list">
+                    <a href="" id="a-1" class="footer-listitem">
+                        <li> Print </li>
+                    </a>
+                    <a href="" id="a-2" class="footer-listitem">
+                        <li>Book store</li>
+                    </a>
+                    <a href="" id="a-3" class="footer-listitem">
+                        <li>Listitem</li>
+                    </a>
+                    <a href="" id="a-4" class="footer-listitem">
+                        <li>Listitem</li>
+                    </a>
+                    <a href="" id="a-5" class="footer-listitem">
+                        <li> Privacy and </li>
+                    </a>
+                    <a href="" id="a-6" class="footer-listitem">
+                        <li>About Ink Waves</li>
+                    </a>
+                    <a href="" id="a-1" class="footer-listitem">
+                        <li> Print </li>
+                    </a>
+                    <a href="" id="a-2" class="footer-listitem">
+                        <li>Book store</li>
+                    </a>
+                    <a href="" id="a-3" class="footer-listitem">
+                        <li>Listitem</li>
+                    </a>
+                    <a href="" id="a-4" class="footer-listitem">
+                        <li>Listitem</li>
+                    </a>
+                    <a href="" id="a-5" class="footer-listitem">
+                        <li> Privacy and </li>
+                    </a>
+                    <a href="" id="a-6" class="footer-listitem">
+                        <li>About Ink Waves</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="right-footer">
+
+                <h3> Our vision</h3>
+                <p>Our mission is to be the leading digital marketplace in Africa, providing a platform for businesses
+                    of all sizes to reach</p>
+                <p>Our mission is to be the leading digital marketplace for independent publishers, providing them with
+                    a platform to reach customers world</p>
+            </div>
+
+
+
+        </div>
+        <div class="subfooter d-flex justify-content-center align-items-center flex-column" style="height: 50px;">
+            <div class="container d-flex justify-content-center align-items-center flex-column">
+                <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
+                    <li> <a href="https://www.facebook.com/Alphauseracc" target="_blank"> <i
+                                class="fa-brands fa-facebook"></i>
+                        </a></li>
+                    <li> <a href="mailto:amduseracc@gmail.com" target="_blank"> <i class="fa-solid fa-at"></i> </a>
+                    </li>
+                    <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
+                                style='font-weight:600;'></i>
+                        </a></li>
+                    <li> <a href="tel:+201555807058" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
+                        </a></li>
+                    <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li><a href="https://linktr.ee/ahmadhaseeb"> <i class="fa-solid fa-tree"></i></a></li>
+                </ul>
+                <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- js bundle -->
     <!-- summon the font awesome library -->
