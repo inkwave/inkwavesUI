@@ -6,6 +6,7 @@ function DomContentLoaded() {
   // Elements
 
   // Upper page
+  const upperPage = document.querySelector(`.upper-page`);
   const subsectionsDiv = document.getElementById("subsections-div");
   const navbar = document.querySelector(`.navbar`);
   const listItems = document.querySelectorAll(".listitem");
@@ -32,6 +33,7 @@ function DomContentLoaded() {
   const signUpForm = document.querySelector(".sign-up-form");
   const detailsBoxes = document.querySelectorAll(`.details-box`);
   const bullets = document.querySelector(`.bullets`);
+  const pageNavLogo = document.getElementById(`page-nav-logo`);
   // Printing options
   const optionsHolder = document.querySelector(`.options-holder`);
 
@@ -52,7 +54,15 @@ function DomContentLoaded() {
     `.printing-side .option-btn`
   );
   const printingLayout = document.querySelector(`.printing-layout`);
-  const bindingOptions = document.querySelectorAll(`.binding-option `);
+  const bindingOptions = document.querySelectorAll(`.binding-option`);
+
+  pageNavLogo.onclick = _ => {upperPage.scrollIntoView()}
+  window.onscroll = _=> {
+    pageNavLogo.textContent  =  pageNavLogo.getBoundingClientRect().top < 20 ? "InkWaves - Go up " :"InkWaves";
+  }
+
+ 
+
 
   // Book carousel
   const books = document.querySelectorAll(`.book`);
@@ -139,7 +149,7 @@ const rightArrow = document.querySelector(`.carousel-arrows .right-arrow`) */
 
   const sliderRanger = document.querySelector(`#books-slider-range-Input`);
   sliderRanger.setAttribute(`max`, `${books.length * 100}`);
-  sliderRanger.max = `${books.length * 100}`;
+  sliderRanger.max = `${(books.length - 4 )* 100}`;
 
   for (let i = 0; i < books.length; i++) {
     books[i].style.cssText = `transform :translateX(${
@@ -163,6 +173,9 @@ const rightArrow = document.querySelector(`.carousel-arrows .right-arrow`) */
     //When clicking reduce the basePosition by 100 as long it is more than tha length
     if (basePosition > (-books.length + 4) * 100) {
       // if 14 books , basePosition > -1100 (the 4 is the number of images in the visible part of the slider)
+      /* If the length is 14 that means each book will be able to translate maximum 14 times, but that will male the movement stop when tha last book is in the place 
+      of the very first book, this will leave unoccupied space on it's right in the visible part of the slider, that's why the movement needs to be reduced by the number 
+      of books in the visible portion of the slider, it is like, before reaching the left border of the slider by 4 books ( including the last one in the visible part) stop the movement  */
       basePosition -= 100;
       changeRangePosition();
     }
@@ -210,7 +223,7 @@ rightArrow.addEventListener(`click`,changeRangePosition) */
   });
 
   document.addEventListener("keyup", function (e) {
-    if ((e.key = "Escape")) {
+    if ((e.key == "Escape")) {
       revealModal();
     }
   });
