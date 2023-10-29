@@ -47,7 +47,19 @@ const qytDown = document.querySelector(`.action-on-book .qyt .qyt-arrows .qyt-do
 const ActionInputValue = document.querySelectorAll(`.qyt-input-value`)
 const bookMoreDetails = document.querySelector(`.book-more-details`)
 const bookMoreDetailsBtn = document.querySelector(`.book-more-details-btn`)
-console.log(qytUp)
+ ////////////////////////// Book carousel
+ const books = document.querySelectorAll(`.book`);
+ const leftArrow = document.querySelector(`.slider-l-arrow`);
+ const rightArrow = document.querySelector(`.slider-r-arrow`);
+ /* const leftArrow = document.querySelector(`.carousel-arrows .left-arrow`)
+const rightArrow = document.querySelector(`.carousel-arrows .right-arrow`) */
+ const range = document.querySelector(`.position-changer input`);
+ const booksHolder = document.querySelector(`.books-holder`);
+
+ //general elements
+ const opacityBG = document.querySelector(`.background-opacity`);
+ const heroNav = document.querySelector(`.hero-nav`);
+ const bodyOverlay = document.querySelector(`.body-overlay`);
 
 
 // Bookmark book
@@ -57,18 +69,26 @@ function bookmarkBook(e) {
     e.target.classList.toggle(`book-bookmarked`)
     // bookmarkBookIcon.style.color = "red"
 }
-qytArrows.addEventListener(`click`, function (e) {
-    console.log(e.target)
-    // qytInput.value++
+
+// Quantity-changing 
+// On clicking 
+qytUp.addEventListener(`click`, function () {
+    if (qytInput.value>= 0) { qytInput.value++; changeSubmitValue()}
 })
-
-qytInput.oninput = () => {
-
-    ActionInputValue.forEach(qi => qi.textContent = qytInput.value)
+qytDown.addEventListener(`click`, function () {
+    if (qytInput.value> 0) { qytInput.value--; changeSubmitValue()}
+})
+// On input 
+qytInput.oninput = changeSubmitValue; // only refer no call
+function changeSubmitValue() {
+    // Don't allow very big sized numbers
+    qytInput.value = qytInput.value < 1000000000000000000 ? qytInput.value : 0;
+    document.querySelector(`.add-book-to-cart-submit`).value = qytInput.value > 0 ? `Add ${qytInput.value} book${qytInput.value > 1 ? "s" : ""} to cart`: "Add to cart";
+    document.querySelector(`.buy-book-submit`).value = qytInput.value > 0 ? `Buy ${qytInput.value} book${qytInput.value > 1 ? "s" : ""}`: "Buy";
 }
 // const subImages = document.querySelectorAll(`.sub-image `)
 console.log(mainImage)
-
+// Go to more details
 bookMoreDetailsBtn.addEventListener(`click`, toMoreDetail)
 function toMoreDetail() {
     bookMoreDetails.scrollIntoView({top : 100 , scroll :"smooth"});
@@ -78,29 +98,13 @@ function toMoreDetail() {
 
 
 
-  ////////////////////////// Book carousel
-  const books = document.querySelectorAll(`.book`);
-  const leftArrow = document.querySelector(`.slider-l-arrow`);
-  const rightArrow = document.querySelector(`.slider-r-arrow`);
-  /* const leftArrow = document.querySelector(`.carousel-arrows .left-arrow`)
-const rightArrow = document.querySelector(`.carousel-arrows .right-arrow`) */
-  const range = document.querySelector(`.position-changer input`);
-  const booksHolder = document.querySelector(`.books-holder`);
-
-  //general elements
-  const opacityBG = document.querySelector(`.background-opacity`);
-  const heroNav = document.querySelector(`.hero-nav`);
-  const bodyOverlay = document.querySelector(`.body-overlay`);
-
-
-
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////    PRODUCT DETAILS
 
 
 
 
-
+// Change images in gallery
   subImages.forEach(subImage => {
     subImage.addEventListener(`click`, function () {
         subImages.forEach(si => {si.classList.remove('active-sub-image')})

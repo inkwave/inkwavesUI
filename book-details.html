@@ -335,7 +335,7 @@
                             </h4>
                         </div>
                         <div> <span>Author :</span><span> Dean Burnet</span></div>
-                        <div> <span>Category :</span><span>  Neuropsychology, Humor & Entertainment</span></div>
+                        <div> <span>Category :</span><span> Neuropsychology, Humor & Entertainment</span></div>
                         <div class="book-rating">
                             <span class="rating-star">⭐</span>
                             <span class="rating-star">⭐</span>
@@ -349,12 +349,13 @@
                         <hr>
                         <span>Starting from</span><span class="book-price h3"> 150 </span> <span class="currency">
                             EGP</span>
+                        <div class="stock"><span class="books-in-stock"> 60 </span> in stock</div>
                         <hr>
                         <div class="book-description">
                             <p>
                                 For something supposedly so brilliant and evolutionarily advanced, the human brain is
                                 pretty
-                                messy, fallible and disorganised. In The Idiot Brain neuroscientist Dean Burnett
+                                messy, fallible and disorganized. In The Idiot Brain neuroscientist Dean Burnett
                                 celebrates
                                 the imperfections of the human brain in all their glory, and the impact of these quirks
                                 on
@@ -365,24 +366,28 @@
                             <button class="btn p-0 m-0 text-primary book-more-details-btn">More details</button>
                         </div>
                         <div class="action-on-book">
-                            <h5> Quantity </h5>
-                            <div class="qyt d-flex gap-3">
-                                <!-- <input class = "qyt-input"type="number" name="" id="" value="1">  -->
-                                <div class="qyt-arrows d-flex flex-column ">
-                                    <span class="qyt-up"> <i class="fa-solid fa-caret-up  p-0 m-0"></i> </span>
-                                    <input class="qyt-input" type="number" name="" id="" value="1">
-                                    <span class="qyt-down"> <i class="fa-solid fa-caret-down  p-0 m-0"></i> </span>
+                            <form action="">
+                                <h5> Quantity </h5>
+                                <div class="qyt d-flex gap-3">
+                                    <!-- <input class = "qyt-input"type="number" name="" id="" value="1">  -->
+                                    <div class="qyt-arrows d-flex flex-column ">
+                                        <span class="qyt-up"> <i class="fa-solid fa-caret-up  p-0 m-0"></i> </span>
+                                        <input class="qyt-input" type="number" name="" id="" min="1" value="1" required>
+                                        <span class="qyt-down"> <i class="fa-solid fa-caret-down  p-0 m-0"></i> </span>
+
+                                    </div>
 
                                 </div>
+                                <div class="action-buttons my-3">
+                                    <div class="add-to-cart my-2">
+                                        <input type="submit" value ="Add to cart" class=" add-book-to-cart-submit btn btn-secondary"> </input>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <input type = "submit" value ="Buy" class=" buy-book-submit btn btn-secondary"> </input>
+                                    </div>
+                                </div>
 
-                            </div>
-                            <div class="action-buttons my-3">
-                                <div class="add-to-cart my-2"> <button class="btn btn-secondary"> Add <span
-                                            class="qyt-input-value"></span> books to cart </button></div>
-                                <div class="add-to-cart"> <button class="btn btn-secondary"> Buy <span
-                                            class="qyt-input-value"></span> book </button></div>
-                            </div>
-
+                            </form>
                         </div>
 
                     </div>
@@ -403,16 +408,18 @@
                     <h5>About book</h5>
                     <div class="further-details">
                         <div class="detail"><span>Author </span><span>Dean Burnet</span></div>
-                        <div class="detail"><span>Publisher  </span><span>Guardian Faber Publishing; Main edition (2 March 2017)</span></div>
-                        <div class="detail"><span>Language  </span><span>Englsih</span></div>
-                        <div class="detail"><span>Paperback  </span><span>‎ 336 pages</span></div>
+                        <div class="detail"><span>Publisher </span><span>Guardian Faber Publishing; Main edition (2
+                                March 2017)</span></div>
+                        <div class="detail"><span>Language </span><span>Englsih</span></div>
+                        <div class="detail"><span>Paperback </span><span>‎ 336 pages</span></div>
                         <div class="detail"><span>ISBN </span><span> 1783350822</span></div>
                         <div class="detail"><span>Dimensions </span><span>12.9 x 2 x 19.8 cm</span></div>
-                        <div class="detail"><span>Category</span><span> Neuropsychology, Humor & Entertainment</span></div>
+                        <div class="detail"><span>Category</span><span> Neuropsychology, Humor & Entertainment</span>
+                        </div>
                         <div class="detail"><span>Also </span><span>Best Sellers Rank: #3,875 in Books </span></div>
-                 
+
                     </div>
-                    
+
 
                 </div>
 
@@ -421,7 +428,7 @@
         </section>
 
         <!-- ---------------------------------------------------------------Initiate Recent books-->
-        <section class="recent-books section hidden" sectionOf="recent-books" sectionTitle="Recent books">
+        <section class="recent-books section hidde" sectionOf="recent-books" sectionTitle="Recent books">
             <div class="container">
                 <div class="section-header">
                     <h3> Related Books</h3>

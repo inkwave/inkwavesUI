@@ -1330,12 +1330,12 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.qyt-arrows span {
+.qyt-arrows  span {
   height: fit-content;
   padding: 0 !important;
   margin: 0 !important;
 }
-.qyt-arrows span * {
+.qyt-arrows  span * {
   font-size: 30px;
   padding: 0 !important;
   margin: 0 !important;
