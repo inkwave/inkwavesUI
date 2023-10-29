@@ -131,6 +131,13 @@ input {
   color: black;
 }
 
+.flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 
 
 
@@ -581,6 +588,8 @@ nav ul li:hover {
   -ms-border-radius: 0 0 10px 10px;
   -o-border-radius: 0 0 10px 10px;
   z-index: 999;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }
 
 .subsection {
@@ -1197,10 +1206,169 @@ footer .container {
   flex-wrap: wrap;
 }
 
-.subfooter {}
+.subfooter {
+  
+}
 
 .subfooter .container {
   color: red;
 
   width: 400px;
+}
+
+
+
+
+
+
+/* *************************************************************************************** Product details file *******************************************************/
+book-details-sec .container {
+  background-color: #0097b2;
+}
+
+.page-announcement {
+  height: 80px;
+
+}
+.book-details-sec .container .book-gallery .sub-images {
+/*   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+   /* Imagine how great it is compared to flex, the images resize dynamically duo to using 1 fr  */
+}
+
+.book-details-sec .container  {
+
+}
+
+.book-details-sec .container .book-gallery, .book-details-sec .container .book-info  {
+  flex: 1;
+}
+.book-details-sec .container .book-gallery .main-image-div {
+  width: 100%;
+}
+.book-details-sec .container .book-gallery .main-image-div img {
+width: 100%;
+}
+
+.book-details-sec .container .book-gallery .sub-images .sub-image {
+  /* width: 25%; */
+  /* width: 138px; */
+  height: 138px;
+  position: relative;
+  padding-bottom: 3px;
+}
+.book-details-sec .container .book-gallery .sub-images .sub-image img {
+  width: 100%;
+  height: 100%;
+}
+.book-details-sec .container .book-gallery .sub-images .sub-image::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+}
+
+.book-details-sec .container .book-gallery .sub-images .sub-image:hover::after {
+  opacity: 0;
+
+}
+.active-sub-image {
+  border-bottom:3px solid var(--bg-color) ;
+
+}
+.active-sub-image::after {
+  opacity: 0 !important; /* when this class applies will be there two classes for same element each one with a separate ::after each with different opacity*/
+}
+
+.rating-star {
+  font-size: 12px;
+
+}
+
+
+.action-on-book .qyt-input {
+  padding: 6px ;
+  border: none;
+  width: 100px;
+  background-color: #0097b2;
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  margin: auto 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.action-on-book .qyt-input:focus {
+  outline: none;
+
+  border: 1px solid var(--bg-color);
+}
+
+
+
+/* Hide the default spin button */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.qyt-arrows span {
+  height: fit-content;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.qyt-arrows span * {
+  font-size: 30px;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+
+}
+
+/* input[type="number"]::-webkit-inner-spin-button {
+color: red;
+font-size: 20px;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+} */
+.bookmark-book-icon {
+  cursor: pointer;
+}
+.book-bookmarked {
+color: orange !important;
+}
+
+.further-details .detail {
+  display: flex;
+  padding: 10px;
+  border-top : 1px solid #eee;
+
+
+}
+.further-details .detail:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.further-details .detail span {
+  flex: 1;
+  /* border: 1px solid red; */
 }
