@@ -45,6 +45,8 @@ const qytInput = document.querySelector(`.action-on-book .qyt .qyt-input`)
 const qytUp = document.querySelector(`.action-on-book .qyt .qyt-arrows .qyt-up`)
 const qytDown = document.querySelector(`.action-on-book .qyt .qyt-arrows .qyt-down`)
 const ActionInputValue = document.querySelectorAll(`.qyt-input-value`)
+const bookMoreDetails = document.querySelector(`.book-more-details`)
+const bookMoreDetailsBtn = document.querySelector(`.book-more-details-btn`)
 console.log(qytUp)
 
 
@@ -67,8 +69,16 @@ qytInput.oninput = () => {
 // const subImages = document.querySelectorAll(`.sub-image `)
 console.log(mainImage)
 
+bookMoreDetailsBtn.addEventListener(`click`, toMoreDetail)
+function toMoreDetail() {
+    bookMoreDetails.scrollIntoView({top : 100 , scroll :"smooth"});
+}
 
-  // Book carousel
+
+
+
+
+  ////////////////////////// Book carousel
   const books = document.querySelectorAll(`.book`);
   const leftArrow = document.querySelector(`.slider-l-arrow`);
   const rightArrow = document.querySelector(`.slider-r-arrow`);
