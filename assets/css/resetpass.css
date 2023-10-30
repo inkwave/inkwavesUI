@@ -171,7 +171,7 @@ color: white;
 
 }
 
-.reset-form {
+.reset-forms {
     flex: 1;
     background-color: white;
     display: flex;
@@ -181,12 +181,12 @@ color: white;
     /* height: 100%; */
 }
 
-.reset-form input {
+.reset-forms input {
     padding: 10px;
     border: none;
     border: 1px solid #eee;
 }
-.reset-form input:focus {
+.reset-forms input:focus {
     outline: none;
     border: 1px solid var(--bg-color);
 }
@@ -228,3 +228,18 @@ color: white;
 .reset-done button:hover {
     background-color: #0097b2   ;
 }
+
+.reset-form {
+    position: relative;
+}
+
+.internal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  

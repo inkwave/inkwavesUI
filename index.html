@@ -40,7 +40,7 @@
         <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon hidden"></button>
         <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
         <div id="sign-side">
-            <div class="sign-modal-internal-overlay hidden"></div>
+            <div class="internal-overlay hidden"></div>
 
 
             <div class="sign-side-holder hidde">
@@ -50,19 +50,19 @@
                 </div>
                 <div class="sign-windows">
                     <form action="" class="sign-up-form sign-form hidden" ; onsubmit=" reset() ;return false">
-                        <input type="text" placeholder="First name">
-                        <input type="text" placeholder="Lase name">
+                        <input type="text" placeholder="First name" required>
+                        <input type="text" placeholder="Lase name" required>
                         <label for="">
                             <h6>Gender</h6>
-                            <label for="male-radio" style="font-size: 12px;"> Male </label>
-                            <input class = "form-check-input" type="radio" id="male-radio">
+                            <label for="male-radio"  style="font-size: 12px;"> Male </label>
+                            <input class = "form-check-input" name = "gender" value = "male" type="radio" id="male-radio" required>
                             <label for="female-radio" style="font-size: 12px;"> Female </label>
-                            <input class = "form-check-input" type="radio" id="female-radio">
+                            <input class = "form-check-input" name = "gender" value = "female" type="radio" id="female-radio">
                         </label>
                         <input type="phone" placeholder="Phone number">
-                        <input type="email" placeholder="E-mail" autocomplete="username">
-                        <input type="password" placeholder="Password" autocomplete="new-password">
-                        <input type="password" placeholder="Confirm Password" autocomplete="new-password">
+                        <input type="email" placeholder="E-mail" autocomplete="username" required>
+                        <input type="password" placeholder="Password" autocomplete="new-password" required>
+                        <input type="password" placeholder="Confirm Password" autocomplete="new-password" required>
                         <div class="privacy-agreement">
                             By signing up you commit that you read and agreed with our <a href="" target="_blank">
                                 privacy </a> and <a href="" target="_blank"> policy </a>
@@ -75,8 +75,8 @@
 
                         <h3> Welcome back </h3>
                         <p> Nice to see you again </p>
-                        <input type="email" placeholder="E-mail" autocomplete="username">
-                        <input type="password" placeholder="Password" autocomplete="current-password">
+                        <input type="email" name = "email" placeholder="E-mail" autocomplete="username" required>
+                        <input type="password" name = "password" placeholder="Password" autocomplete="current-password" required>
                         <div class="remember-me">
                             <label>
                                 <input type="checkbox" name="">
@@ -144,6 +144,7 @@
 
 
 
+
     <!--  Initiate header and navbar  -->
     <div class="background-opacity hidden"></div>
     <div class="upper-page">
@@ -161,8 +162,8 @@
                         <input type="search" placeholder="Search" class="search-bar">
                         <!-- <i id = "glass-icon" class="fa-solid fa-magnifying-glass search-icon"></i> -->
                     </div>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-solid fa-bookmark"></i>
+                   <a href="cart.html" class = "cart-anchor"> <i class="fa-solid fa-cart-shopping cart-icon"></i> <span class="number-of-products-in-cart">1</span> </a> 
+                    <i class="fa-solid fa-bookmark header-bookmark"></i>
                     <button class="header-sign-btns" id="header-sign-in-btn"> Sign in</button>
                     <button class="header-sign-btns" id="header-sign-up-btn"> Sign up</button>
                 </div>
@@ -170,30 +171,52 @@
             </div>
             <nav class="navbar">
                 <ul class="">
+                    <li>
                     <a href="" id="a-1" itemName="print" class="listitem">
-                        <li> Print </li>
+                        
+                        Print
                     </a>
+                </li>
+                <li>
                     <a href="book-details.html" id="a-1" itemName="print" class="listitem">
-                        <li> Book details </li>
+                         Book details 
                     </a>
+                </li>
+                <li>
+                    <a href="user-dashboard.html" id="a-1" itemName="print" class="listitem">
+                        User dashboard 
+                    </a>
+                </li>
+                <li>
                     <a href="" id="a-2" itemName="book-store" class="listitem">
-                        <li>Book store</li>
+                        Book store
                     </a>
+                </li>
+                <li>
                     <a href="reset-password.html" itemName="3" id="a-3" class="listitem">
-                        <li>Reset pass</li>
+                        Reset pass
                     </a>
+                </li>
+                <li>
                     <a href="update-pass.html" itemName="3" id="a-3" class="listitem">
-                        <li>update pass</li>
+                        update pass
                     </a>
+                </li>
+                <li>
                     <a href="" id="a-4" itemName="4" class="listitem">
-                        <li>Listitem</li>
+                        Listitem
                     </a>
+                </li>
+                <li>
                     <a href="" id="a-5" itemName="privacy-and-conditions" class="listitem">
-                        <li> Privacy and </li>
+                        Privacy and 
                     </a>
+                </li>
+                <li>
                     <a href="" id="a-6" itemName="about" class="listitem">
-                        <li>About Ink Waves</li>
+                         About Ink Wave 
                     </a>
+                </li>
                 </ul>
             </nav>
             <div id="subsections-div" class="sub-divs-container hidde width-100% ">
@@ -778,7 +801,7 @@
 
     </section>
     <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
-    <section class="talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
+    <section class="attract-user attract-user-talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
         <div class="container">
             <h4> Get to Know us more </h4>
             <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>

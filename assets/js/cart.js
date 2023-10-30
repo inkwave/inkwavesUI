@@ -180,7 +180,7 @@ const sendAnotherBtn = document.querySelector(`.Send-another-btn `);
 const signUpSubmit  = document.querySelector(`.sign-up-submit`); 
 const activationCodeDiv  = document.querySelector(`.activation-code`); 
 const modalLogo  = document.querySelector(`.modal-logo`); 
-const signModalInternalOverlay  = document.querySelector(`.sign-modal-internal-overlay`); 
+const signModalInternalOverlay  = document.querySelector(`.internal-overlay`); 
 
 
 // Define the initial values ( the interval needs to be stored in a variable to clear it later )

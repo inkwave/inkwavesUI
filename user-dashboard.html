@@ -35,7 +35,7 @@
         <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon hidden"></button>
         <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
         <div id="sign-side">
-            <div class="sign-modal-internal-overlay hidden"></div>
+            <div class="internal-overlay hidden"></div>
 
 
             <div class="sign-side-holder hidde">
@@ -49,10 +49,10 @@
                         <input type="text" placeholder="Lase name">
                         <label for="">
                             <h6>Gender</h6>
-                            <label for="male-radio" style="font-size: 12px;"> Male </label>
-                            <input type="radio" id="male-radio">
+                            <label for="male-radio"  style="font-size: 12px;"> Male </label>
+                            <input class = "form-check-input" name = "gender" value = "male" type="radio" id="male-radio">
                             <label for="female-radio" style="font-size: 12px;"> Female </label>
-                            <input type="radio" id="female-radio">
+                            <input class = "form-check-input" name = "gender" value = "female" type="radio" id="female-radio">
                         </label>
                         <input type="phone" placeholder="Phone number">
                         <input type="email" placeholder="E-mail" autocomplete="username">
@@ -129,15 +129,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
     <!--  Initiate header and navbar  -->
     <div class="background-opacity hidden"></div>
@@ -324,138 +315,246 @@
     </div>
 
 
+
     <div id="landing-page">
         <!-- ---------------------------------------------------------------Initiate hero section -->
-        <section class="hero" sectionOf="hero" sectionTitle="Hero">
+        <section class="hero user-dashboard-hero" sectionOf="hero" sectionTitle=".">
             <div class="container">
                 <div class="hero-content">
-                    <h3>All your printing and book selling services <br>in one place</h3>
+                    <h3>Manage your account     </h3>
                     <p class="hero-description">
-                        Find the best selling books or Print one along with printing all your sheets with multiple
-                        options satisfying all of your needs.
+                       Surf your orders, wallet, update your information and more.
                     </p>
-                    <button id="book-store-btn" class="hero-service-btn">Book Store</button>
-                    <button id="print-now-btn" class="hero-service-btn"> Print Now</button>
+                    <!-- <button  class=" main-hero-service-btn hero-service-btn shop-more-btn"> Shop more </button>
+                    <button  class=" secondary-hero-service-btn hero-service-btn "> Print Now</button> -->
                 </div>
             </div>
 
         </section>
 
-        <div class="hero-nav-container">
+        <div class="hero-nav-container ">
             <ul class="hero-nav container">
                 <li style="font-family:  cairo; font-weight: bold; color: cadetblue;" id="page-nav-logo">InkWaves</li>
                 <!-- List items appended dynamically -->
             </ul>
         </div>
+        <!-- ---------------------------------------------------------------Initiate Orders section -->
 
-        
-
-    <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
-    <section class="attract-user attract-user-talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
-        <div class="container">
-            <h4> Get to Know us more </h4>
-            <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>
-                <span class="talk-or-sign"> Talk with us know</span> to get to know more about what we can provide.
-            </p>
-            <div class="buttons "><button class=""> Check our service </button><button class="">Talk with us</button>
-            </div>
-        </div>
-    </section>
-    <!-- ------------------------------------------------------------ Initiate Footer------------------------------------------->
-
-    <footer>
-        <div class="container">
-
-            <div class="left-footer">
-                <div class="left-footer-logo">
-                    <a href="index.html">
-                        <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
+        <section class="user-orders m-3  " sectionOf="user-order" sectionTitle="Orders">
+            <div class="container  p-5">
+                <h3 class = "user-section-header" header-for="orders-section-content"> Orders </h3>
+                <hr>
+                <div id="orders-section-content" class = "user-div">
+                    <div class="orders-brief d-flex justify-content-between ">
+                        <div class="order-brief-box">
+                            <h6> Wallet </h6>
+                            <h2>1700 <span>EGP</span></h2>
                         </div>
-                    </a>
-                    <p> We provide best printing and book selling service </p>
+                        <div class="order-brief-box"></div>
+                        <div class="order-brief-box"></div>
+                        <div class="order-brief-box  ">
+                            <h6> Orders </h6>
+                            <h2> 7 <span>Orders</span></h2>
+                        </div>
+                        <div class="order-brief-box"></div>
+                        <div class="order-brief-box"></div>
+                        <div class="order-brief-box  ">
+                            <h6> Files </h6>
+                            <h2> 18 <span>Files</span></h2>
+                        </div>
+                        <div class="order-brief-box"></div>
+                        <div class="order-brief-box"></div>
+                    </div>
+                    <h4 class="orders-history-title p-2"> Orders history </h4>
+                    <div class="orders-history ">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col"> ID </th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="no-orders-yet hidden">
+                                <tr>
+
+                                    <td> No orders yet </td>
+                                </tr>
+                            </tbody>
+                            <tbody class='hidde'>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Value here</td>
+                                    <td> Value here </td>
+                                    <td>Value here</td>
+                                    <td>Value here</td>
+                                </tr>
+                                <!-- For each new order create a new tr and insert the values dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="left-footer-details">
-                    <h6>Get our app on</h6>
-                    <a href=""><i class="fa-brands fa-app-store-ios me-4"></i></a>
-                    <a href=""><i class="fa-brands fa-google-play"></i></a>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------Initiate Update info section -->
+
+        <section class="update-user-info m-3" sectionOf="update-user-details" sectionTitle="Update Info">
+            <div class="container p-5">
+                <h3 class = "user-section-header" header-for="update-user-info-content"> Update Information </h3>
+                <hr>
+                <div id="update-user-info-content" class = "user-div">
+                    <form action="" class="sign-up-form sign-form update-user-info-form hidde" ;
+                        onsubmit=" reset() ;return false">
+                        <label for="first-name"> First name </label>
+                        <input id="first-name" type="text" value="Ink">
+                        <label for="last-name">Last name</label>
+                        <input id="last-name" type="text" value="Waves">
+
+
+                        <h6>Gender</h6>
+                        <label for="male-radio" style="font-size: 12px;"> Male </label>
+                        <input id="" class="form-check-input" type="radio" id="male-radio">
+                        <label for="female-radio" style="font-size: 12px;"> Female </label>
+                        <input id="" class="form-check-input" type="radio" id="female-radio">
+
+                        <label for="phone-num"> Phone number </label>
+                        <input id="phone-num" type="phone" placeholder="Phone number">
+                        <h4>Update E-mail</h4>
+                        <label for="e-mail"> E-mail</label>
+                        <input id="e-mail" type="email" placeholder="E-mail" autocomplete="username">
+                        <label for="new-e-mail"> New e-mail</label>
+                        <input id="new-e-mail" type="email" placeholder="E-mail" autocomplete="username">
+                        <h4>Update password</h4>
+                        <label for="current-pass"> Current passwords</label>
+                        <input id="current-pass" type="password" placeholder="current pass">
+                        <label for="new-pass"> New passwords</label>
+                        <input id="new-pass" type="password" placeholder="Password">
+                        <label for="confirm-new-pass">Confirm new passwords</label>
+                        <input id="confirm-new-pass" type="password" placeholder="Confirm Password">
+
+
+                        <input type="submit" value="Update Info" class="btn btn-primary">
+                        </input>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
+        <section class="attract-user  talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
+            <div class="container">
+                <h4> Get to Know us more </h4>
+                <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>
+                    <span class="talk-or-sign"> Talk with us know</span> to get to know more about what we can provide.
+                </p>
+                <div class="buttons "><button class=""> Check our service </button><button class="">Talk with
+                        us</button>
                 </div>
             </div>
+        </section>
+        <!-- ------------------------------------------------------------ Initiate Footer------------------------------------------->
 
-            <div class="middle-footer ">
-                <ul class=" footer-list">
-                    <a href="" id="a-1" class="footer-listitem">
-                        <li> Print </li>
-                    </a>
-                    <a href="" id="a-2" class="footer-listitem">
-                        <li>Book store</li>
-                    </a>
-                    <a href="" id="a-3" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-4" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-5" class="footer-listitem">
-                        <li> Privacy and </li>
-                    </a>
-                    <a href="" id="a-6" class="footer-listitem">
-                        <li>About Ink Waves</li>
-                    </a>
-                    <a href="" id="a-1" class="footer-listitem">
-                        <li> Print </li>
-                    </a>
-                    <a href="" id="a-2" class="footer-listitem">
-                        <li>Book store</li>
-                    </a>
-                    <a href="" id="a-3" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-4" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-5" class="footer-listitem">
-                        <li> Privacy and </li>
-                    </a>
-                    <a href="" id="a-6" class="footer-listitem">
-                        <li>About Ink Waves</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="right-footer">
+        <footer>
+            <div class="container">
 
-                <h3> Our vision</h3>
-                <p>Our mission is to be the leading digital marketplace in Africa, providing a platform for businesses
-                    of all sizes to reach</p>
-                <p>Our mission is to be the leading digital marketplace for independent publishers, providing them with
-                    a platform to reach customers world</p>
-            </div>
-
-
-
-        </div>
-        <div class="subfooter " style="height: 50px;">
-            <div class=" d-flex justify-content-center align-items-center flex-column">
-                <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
-                    <li> <a href="" target="_blank"> <i
-                                class="fa-brands fa-facebook"> </i> </a> </li>
-
-
-                    <li> <a href="mailto" target="_blank"> <i class="fa-solid fa-at"></i> </a>
-                    </li>
-                    <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
-                                style='font-weight:600;'></i>
-                        </a></li>
-                    <li> <a href="tel:+20" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
-                        </a></li>
-                    <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i class="fa-brands fa-github"></i>
+                <div class="left-footer">
+                    <div class="left-footer-logo">
+                        <a href="index.html">
+                            <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
+                            </div>
                         </a>
-                    </li>
-                    <li><a href=""> <i class="fa-solid fa-tree"></i></a></li>
-                </ul>
-                <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
+                        <p> We provide best printing and book selling service </p>
+                    </div>
+                    <div class="left-footer-details">
+                        <h6>Get our app on</h6>
+                        <a href=""><i class="fa-brands fa-app-store-ios me-4"></i></a>
+                        <a href=""><i class="fa-brands fa-google-play"></i></a>
+                    </div>
+                </div>
+
+                <div class="middle-footer ">
+                    <ul class=" footer-list">
+                        <a href="" id="a-1" class="footer-listitem">
+                            <li> Print </li>
+                        </a>
+                        <a href="" id="a-2" class="footer-listitem">
+                            <li>Book store</li>
+                        </a>
+                        <a href="" id="a-3" class="footer-listitem">
+                            <li>Listitem</li>
+                        </a>
+                        <a href="" id="a-4" class="footer-listitem">
+                            <li>Listitem</li>
+                        </a>
+                        <a href="" id="a-5" class="footer-listitem">
+                            <li> Privacy and </li>
+                        </a>
+                        <a href="" id="a-6" class="footer-listitem">
+                            <li>About Ink Waves</li>
+                        </a>
+                        <a href="" id="a-1" class="footer-listitem">
+                            <li> Print </li>
+                        </a>
+                        <a href="" id="a-2" class="footer-listitem">
+                            <li>Book store</li>
+                        </a>
+                        <a href="" id="a-3" class="footer-listitem">
+                            <li>Listitem</li>
+                        </a>
+                        <a href="" id="a-4" class="footer-listitem">
+                            <li>Listitem</li>
+                        </a>
+                        <a href="" id="a-5" class="footer-listitem">
+                            <li> Privacy and </li>
+                        </a>
+                        <a href="" id="a-6" class="footer-listitem">
+                            <li>About Ink Waves</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="right-footer">
+
+                    <h3> Our vision</h3>
+                    <p>Our mission is to be the leading digital marketplace in Africa, providing a platform for
+                        businesses
+                        of all sizes to reach</p>
+                    <p>Our mission is to be the leading digital marketplace for independent publishers, providing them
+                        with
+                        a platform to reach customers world</p>
+                </div>
+
+
+
             </div>
-        </div>
-       <!--  <div class="subfooter " style="height: 50px;">
+            <div class="subfooter " style="height: 50px;">
+                <div class=" d-flex justify-content-center align-items-center flex-column">
+                    <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
+                        <li> <a href="" target="_blank"> <i class="fa-brands fa-facebook"> </i> </a> </li>
+
+
+                        <li> <a href="mailto" target="_blank"> <i class="fa-solid fa-at"></i> </a>
+                        </li>
+                        <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
+                                    style='font-weight:600;'></i>
+                            </a></li>
+                        <li> <a href="tel:+20" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
+                            </a></li>
+                        <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i
+                                    class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li><a href=""> <i class="fa-solid fa-tree"></i></a></li>
+                    </ul>
+                    <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
+                </div>
+            </div>
+            <!--  <div class="subfooter " style="height: 50px;">
             <div class=" d-flex justify-content-center align-items-center flex-column">
                 <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
                     <li> <a href="https://www.facebook.com/Alphauseracc" target="_blank"> <i
@@ -477,17 +576,17 @@
                 <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
             </div>
         </div> -->
-    </footer>
+        </footer>
 
-    <!-- js bundle -->
-    <!-- summon the font awesome library -->
-    <script src="assets/js/fa-js/all.min.js"></script>
-    <!-- summon the bootstrap toolkit -->
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.js"></script>
-    <!-- summon the app file -->
-    <script src="assets/js/book-details.js"></script>
-    <script src="assets/js/bootstrap.min.js.map"></script>
+        <!-- js bundle -->
+        <!-- summon the font awesome library -->
+        <script src="assets/js/fa-js/all.min.js"></script>
+        <!-- summon the bootstrap toolkit -->
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap/bootstrap.js"></script>
+        <!-- summon the app file -->
+        <script src="assets/js/user-dashboard.js"></script>
+        <script src="assets/js/bootstrap.min.js.map"></script>
 </body>
 
 </html>

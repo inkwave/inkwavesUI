@@ -82,7 +82,7 @@ qytDown.addEventListener(`click`, function () {
 qytInput.oninput = changeSubmitValue; // only refer no call
 function changeSubmitValue() {
     // Don't allow very big sized numbers
-    qytInput.value = qytInput.value < 1000000000000000000 ? qytInput.value : 0;
+    qytInput.value = qytInput.value.length < 6 ? qytInput.value : 0;
     document.querySelector(`.add-book-to-cart-submit`).value = qytInput.value > 0 ? `Add ${qytInput.value} book${qytInput.value > 1 ? "s" : ""} to cart`: "Add to cart";
     document.querySelector(`.buy-book-submit`).value = qytInput.value > 0 ? `Buy ${qytInput.value} book${qytInput.value > 1 ? "s" : ""}`: "Buy";
 }
@@ -369,7 +369,7 @@ const sendAnotherBtn = document.querySelector(`.Send-another-btn `);
 const signUpSubmit  = document.querySelector(`.sign-up-submit`); 
 const activationCodeDiv  = document.querySelector(`.activation-code`); 
 const modalLogo  = document.querySelector(`.modal-logo`); 
-const signModalInternalOverlay  = document.querySelector(`.sign-modal-internal-overlay`); 
+const signModalInternalOverlay  = document.querySelector(`.internal-overlay`); 
 
 
 // Define the initial values ( the interval needs to be stored in a variable to clear it later )

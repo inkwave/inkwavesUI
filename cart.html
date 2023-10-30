@@ -35,7 +35,7 @@
         <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon hidden"></button>
         <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
         <div id="sign-side">
-            <div class="sign-modal-internal-overlay hidden"></div>
+            <div class="internal-overlay hidden"></div>
 
 
             <div class="sign-side-holder hidde">
@@ -326,16 +326,32 @@
 
     <div id="landing-page">
         <!-- ---------------------------------------------------------------Initiate hero section -->
-        <section class="hero" sectionOf="hero" sectionTitle="Hero">
+        <section class="hero cart-hero position-relative" sectionOf="hero" sectionTitle="Hero">
+            <div class="internal-overlay" style="z-index: 0;"></div>
+
             <div class="container">
-                <div class="hero-content">
-                    <h3>All your printing and book selling services <br>in one place</h3>
-                    <p class="hero-description">
-                        Find the best selling books or Print one along with printing all your sheets with multiple
-                        options satisfying all of your needs.
-                    </p>
-                    <button id="book-store-btn" class="hero-service-btn">Book Store</button>
-                    <button id="print-now-btn" class="hero-service-btn"> Print Now</button>
+                <div class="hero-content w-100">
+                    <h3 class = "my-3"> Cart Details</h3>
+                    <div class="cart-details d-flex justify-content-between">
+                        <div class="cart-details-box ">
+                            <h5> Total </h5>
+                            <h2> <span class = "cart-total"> 450 </span> EGP</h2> 
+                        </div>
+                        <div class="cart-details-box ">
+                            <h5> shipping </h5>
+                            <h2> <span class = "cart-total"> 70 </span> EGP</h2> 
+                        </div>
+                        <div class="cart-details-box ">
+                            <h5> Subtotal </h5>
+                            <h2> <span class = "cart-total"> 380 </span> EGP</h2> 
+                        </div>
+                        <div class="cart-details-box ">
+                            <h5> Orders </h5>
+                            <h2> <span class = "cart-total"> 7 </span></h2> 
+                        </div>
+                    </div class ="d-flex flex-row">
+                    <button  class=" main-hero-service-btn hero-service-btn shop-more-btn"> Shop more </button>
+                    <button  class=" secondary-hero-service-btn hero-service-btn "> Print Now</button>
                 </div>
             </div>
 
@@ -348,7 +364,17 @@
             </ul>
         </div>
 
-        
+   <section class="cart-products">
+    <div class="container">
+        <div class="cart-product p-2 d-flex gap-3">
+            <div class="cart-product-img"><img class = "w-100 h-100" src="./assets/media/images/books Carousel/the-hunger-games-usa-edition-.webp" alt="Product-image" ></div>
+            <div class="cart-product-details">
+<h4> The hunger games </h4>
+            </div>
+
+        </div>
+    </div>
+   </section>
 
     <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
     <section class="attract-user attract-user-talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
@@ -486,7 +512,7 @@
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.js"></script>
     <!-- summon the app file -->
-    <script src="assets/js/book-details.js"></script>
+    <script src="assets/js/cart.js"></script>
     <script src="assets/js/bootstrap.min.js.map"></script>
 </body>
 

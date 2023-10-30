@@ -143,15 +143,16 @@ input {
 
 
 /* ------------------------------------------------------------ Initiate General */
-.body-overlay{
+.body-overlay {
   /* content: ""; */
   position: fixed;
   width: 100vw;
   height: 100Vh;
-  background-color: rgba( 0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
-  z-index: 1000; /* above all but not the sign modal */
+  z-index: 1000;
+  /* above all but not the sign modal */
 
 }
 
@@ -179,14 +180,15 @@ input {
   -o-border-radius: 15px;
   /* box-shadow:inset rgba(9, 30, 66, 0.25) 5px 5px 5px, inset rgba(9, 30, 66, 0.13) 5px 5px 5px; */
 
-  z-index: 1001; /* above all */
+  z-index: 1001;
+  /* above all */
 }
 
 
 
 .close-modal-icon {
   font-size: 20px;
-  color: black ;
+  color: black;
   position: absolute;
   right: 15px;
   top: 15px;
@@ -208,11 +210,12 @@ input {
   position: relative;
 
 }
-.sign-modal-internal-overlay {
+
+.internal-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba( 0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   z-index: 1000;
@@ -258,9 +261,11 @@ input {
   border: 1px solid #eee;
   outline: 0;
 }
+
 .sign-form input:focus {
   border: 1px solid var(--yinmn-blue);
 }
+
 .sign-buttons {
   padding: 7px;
   border: none;
@@ -271,6 +276,7 @@ input {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 .activeBtn {
   /* background-color: var(--bg-color); */
   background-color: #0b5ed7;
@@ -333,10 +339,12 @@ input {
   width: 70%;
 
 }
+
 .enter-ur-mail .ur-mail-header {
- color: white;
+  color: white;
 }
-.enter-ur-mail .send{
+
+.enter-ur-mail .send {
   width: fit-content;
   padding: 10px 20px;
   border: none;
@@ -348,11 +356,13 @@ input {
   flex-direction: column;
   gap: 5px;
 }
-.submit-code  {
+
+.submit-code {
   width: fit-content;
 
 }
-.activation-code input:not(.submit-code){
+
+.activation-code input:not(.submit-code) {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.50);
   border: none;
@@ -360,7 +370,8 @@ input {
   outline: none;
   width: 100%;
 }
-.activation-code input:focus{
+
+.activation-code input:focus {
   border: 1px solid var(--yinmn-blue);
 
   outline: none;
@@ -372,7 +383,7 @@ input {
 }
 
 
-/* ------------------------------------------------------------ Initiate upper page */
+/*#region ------------------------------------------------------------ Initiate upper page */
 .upper-page .container {
   position: relative;
 }
@@ -442,6 +453,26 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: transparent;
   border: none;
 }
+.cart-anchor {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.cart-anchor:hover,
+.header-bookmark:hover,
+.header-sign-btns:hover
+{
+color: #0097b2;
+cursor: pointer;
+
+}
+.number-of-products-in-cart {
+  color: red;
+}
+
+/* #endregion */
 
 .sub-divs-container {
   /* border: 1px solid red ; */
@@ -459,6 +490,7 @@ input[type="search"]::-webkit-search-cancel-button {
   /* position: relative; */
   /* padding: 0%; */
   /* border-bottom: 2px solid #eee; */
+  width: 100%;
   z-index: 999;
   padding: 0;
   margin: 0;
@@ -523,7 +555,8 @@ nav ul li:hover {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  display: flex; /* For some reason when not displayed flex the pseudo layer moves to above the text */
+  display: flex;
+  /* For some reason when not displayed flex the pseudo layer moves to above the text */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -653,7 +686,8 @@ nav ul li:hover {
 .hero {
   background-image: url("https://www.moo.com/dam/jcr:62e34a02-995e-4482-a7b0-1296ab7dec48/0599WF-October-Campaign-2023-HP-1920x530-Holiday-Products.jpg");
   background-size: cover;
-  height: 500px;
+  /* height: 500px; */
+  padding: 50px 0;
   color: white;
 
 
@@ -664,7 +698,8 @@ nav ul li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  position: sticky!important; top : 0; 
+  position: sticky !important;
+  top: 0;
 
 }
 
@@ -690,17 +725,18 @@ nav ul li:hover {
   -o-border-radius: 5px;
 }
 
-.hero .container .hero-content #book-store-btn {
+.main-hero-service-btn {
   padding: 10px 30px;
   background-color: #0097b2;
   color: white;
-  
+
 }
-.hero .container .hero-content #book-store-btn:hover {
+
+.hero .container .hero-content .main-hero-service-btn:hover {
   padding: 10px 20px;
 }
 
-.hero .container .hero-content #print-now-btn:hover {
+.hero .container .hero-content .secondary-hero-service-btn:hover {
   padding: 10px 30px;
   background-color: #0097b2;
   color: white;
@@ -709,14 +745,16 @@ nav ul li:hover {
 
 .hero-nav-container {
   background-color: white;
-  position: sticky!important; top : 0; 
-  border-bottom:1px solid #eee   ;
+  position: sticky !important;
+  top: 0;
+  border-bottom: 1px solid #eee;
   z-index: 999;
 
 
 
 }
-.hero-nav  {
+
+.hero-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -725,7 +763,7 @@ nav ul li:hover {
   /* background-color: #0097b2; */
   padding: 5px 5px;
   margin: auto;
-  
+
 }
 
 /* Hovering effect */
@@ -743,7 +781,7 @@ nav ul li:hover {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color:#0097b2;
+  background-color: #0097b2;
   transition: all .5s ease-in-out;
   transform: translateX(-50%);
 }
@@ -751,6 +789,7 @@ nav ul li:hover {
 .hero-nav li:hover::after {
   width: 100%;
 }
+
 .hero-nav li.reveal-on-Intersection::after {
   width: 100%;
 }
@@ -767,16 +806,19 @@ nav ul li:hover {
   /* solid height tho hold the changer in it's place when the book becomes absolute */
   overflow: hidden;
 }
+
 .slider-arrow {
   position: absolute;
   top: 50%;
-  
+
   z-index: 10;
   font-size: 50px;
 }
+
 .slider-l-arrow {
   left: 20px;
 }
+
 .slider-r-arrow {
   right: 20px;
 }
@@ -1087,7 +1129,7 @@ section#our-printing-advantages {
 }
 
 /* ----------------- Initial Talk with us ----------------- */
-.talk-with-us .container {
+.attract-user .container {
   height: 300px;
   background-image: url("https://www.moo.com/dam/jcr:8f0315da-4b0b-4a4c-a140-724a370b075b/0585WF-CTA-1176x578-intercom1.jpg");
   background-repeat: no-repeat;
@@ -1098,15 +1140,23 @@ section#our-printing-advantages {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
+.attract-user-surf-services .container {
+  background-image: url("https://www.moo.com/.imaging/scale/dam/045f2124-999a-487a-9e40-008dbe7c44bb/CRB-4987-Sample-pack-CTA-2352x500.jpg");
+  /* background-size: contain; */
 
 }
 
-.talk-with-us .container * {
+.attract-user .container * {
   color: white;
 }
 
-.talk-with-us .container .buttons button {
+.attract-user-surf-services .container * {
+  color: black;
+}
+
+.attract-user .container .buttons button {
   border: none;
   background-color: transparent;
   outline: none;
@@ -1120,7 +1170,7 @@ section#our-printing-advantages {
   -o-border-radius: 2px;
 }
 
-.talk-with-us .container .buttons button:hover {
+.attract-user .container .buttons button:hover {
 
   background-color: white;
   color: #323c49;
@@ -1128,7 +1178,7 @@ section#our-printing-advantages {
 
 
 
-.talk-with-us .container .buttons button:last-child {
+.attract-user .container .buttons button:last-child {
   background-color: white;
   color: #323c49;
 }
@@ -1206,9 +1256,7 @@ footer .container {
   flex-wrap: wrap;
 }
 
-.subfooter {
-  
-}
+.subfooter {}
 
 .subfooter .container {
   color: red;
@@ -1230,28 +1278,30 @@ book-details-sec .container {
   height: 80px;
 
 }
+
 .book-details-sec .container .book-gallery .sub-images {
-/*   display: flex;
+  /*   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
-   /* Imagine how great it is compared to flex, the images resize dynamically duo to using 1 fr  */
+  /* Imagine how great it is compared to flex, the images resize dynamically duo to using 1 fr  */
 }
 
-.book-details-sec .container  {
+.book-details-sec .container {}
 
-}
-
-.book-details-sec .container .book-gallery, .book-details-sec .container .book-info  {
+.book-details-sec .container .book-gallery,
+.book-details-sec .container .book-info {
   flex: 1;
 }
+
 .book-details-sec .container .book-gallery .main-image-div {
   width: 100%;
 }
+
 .book-details-sec .container .book-gallery .main-image-div img {
-width: 100%;
+  width: 100%;
 }
 
 .book-details-sec .container .book-gallery .sub-images .sub-image {
@@ -1261,11 +1311,13 @@ width: 100%;
   position: relative;
   padding-bottom: 3px;
 }
+
 .book-details-sec .container .book-gallery .sub-images .sub-image img {
   width: 100%;
   height: 100%;
 }
-.book-details-sec .container .book-gallery .sub-images .sub-image::after{
+
+.book-details-sec .container .book-gallery .sub-images .sub-image::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1285,12 +1337,15 @@ width: 100%;
   opacity: 0;
 
 }
+
 .active-sub-image {
-  border-bottom:3px solid var(--bg-color) ;
+  border-bottom: 3px solid var(--bg-color);
 
 }
+
 .active-sub-image::after {
-  opacity: 0 !important; /* when this class applies will be there two classes for same element each one with a separate ::after each with different opacity*/
+  opacity: 0 !important;
+  /* when this class applies will be there two classes for same element each one with a separate ::after each with different opacity*/
 }
 
 .rating-star {
@@ -1300,7 +1355,7 @@ width: 100%;
 
 
 .action-on-book .qyt-input {
-  padding: 6px ;
+  padding: 6px;
   border: none;
   width: 100px;
   background-color: #0097b2;
@@ -1327,15 +1382,17 @@ width: 100%;
 /* Hide the default spin button */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
-.qyt-arrows  span {
+
+.qyt-arrows span {
   height: fit-content;
   padding: 0 !important;
   margin: 0 !important;
 }
-.qyt-arrows  span * {
+
+.qyt-arrows span * {
   font-size: 30px;
   padding: 0 !important;
   margin: 0 !important;
@@ -1353,17 +1410,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .bookmark-book-icon {
   cursor: pointer;
 }
+
 .book-bookmarked {
-color: orange !important;
+  color: orange !important;
 }
 
 .further-details .detail {
   display: flex;
   padding: 10px;
-  border-top : 1px solid #eee;
+  border-top: 1px solid #eee;
 
 
 }
+
 .further-details .detail:last-child {
   border-bottom: 1px solid #eee;
 }
@@ -1372,3 +1431,85 @@ color: orange !important;
   flex: 1;
   /* border: 1px solid red; */
 }
+
+
+
+
+/* #region  User Dashboard*/
+.update-user-info .container {
+  /* border: 1px solid #eee; */
+  padding: 20px;
+
+}
+.update-user-info .container form label {
+  /* height: 0; */
+  cursor: pointer;
+}
+
+.update-user-info .container form input {
+ 
+ /*  opacity: 0;
+  transition:  opacity 2s;
+  -webkit-transition:  opacity 2s;
+  -moz-transition:  opacity 2s;
+  -ms-transition:  opacity 2s;
+  -o-transition:  opacity 2s; */
+}
+
+
+.activeInput {
+  /* opacity: 1; */
+}
+
+.user-section-header:hover {
+  cursor: pointer;
+  color: var(--bg-color);
+}
+.user-div {
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+.activeUserDiv {
+  height: fit-content;
+}
+
+.activate-user-section {
+  background-color: #eee;
+}
+
+.user-dashboard-hero {
+background-image: url("https://www.moo.com/dam/jcr:09a7a24f-a73b-41f0-affd-242f2f70142e/0593WF-MBS-Pages-HP-1920x1080-Business-Plans.jpg");
+color: black;
+}
+
+/* #endregion */
+
+/* #region *************************************************************** Cart */
+.cart-hero {
+  background-image: url("https://www.moo.com/dam/jcr:bb5e5f4c-3bd4-4750-ad6f-221785dc36be/0306WF-CH-1920x350-accessories.jpg");
+}
+
+.cart-product-img {
+  width: 150px;
+  height: 200px;
+}
+
+.cart-product-img img{
+ /*  width: 100%;
+  height: 100%; */
+}
+
+
+
+
+
+
+
+
+
+/* #endregion */
