@@ -1495,7 +1495,7 @@ color: black;
 }
 
 .cart-product-img {
-  width: 150px;
+ min-width: 150px;
   height: 200px;
 }
 
@@ -1504,9 +1504,32 @@ color: black;
   height: 100%; */
 }
 
+.cart-products .container .cart-product-details-side {
+  /* display: grid; */
+  /* grid-template-columns: repeat(1 , 1fr); */
 
+}
 
+.cart-product-description p{
+margin: 0;
+padding: 0;
+}
 
+.cart-product-transaction-side {
+  position : relative;
+
+}
+
+.remove-product {
+  position : absolute;
+  top: 10px ;
+  right : 10px;
+  font-size: 30px;
+}
+.remove-product:hover {
+  color: red;
+  cursor: pointer;
+}
 
 
 
