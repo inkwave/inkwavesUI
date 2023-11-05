@@ -37,314 +37,18 @@
 
     <!-- ---------------------------------------------------------------Initiate Sign Modal window -->
     <div id="sign-modal" class="hidden">
-        <button id="close-icon" class="fa-solid fa-circle-xmark close-modal-icon hidden"></button>
-        <!-- <button id = "closeModalButton" onclick="close()"> Close</button> -->
-        <div id="sign-side">
-            <div class="internal-overlay hidden"></div>
-
-
-            <div class="sign-side-holder hidde">
-                <div id="sign-in-up-buttons" class=" my-3">
-                    <button class="sign-buttons sign-in-btn activeBtn"> Sign in
-                    </button><button class="sign-buttons sign-up-btn"> Sign up </button>
-                </div>
-                <div class="sign-windows">
-                    <form action="" class="sign-up-form sign-form hidden" ; onsubmit=" reset() ;return false">
-                        <input type="text" placeholder="First name" required>
-                        <input type="text" placeholder="Lase name" required>
-                        <label for="">
-                            <h6>Gender</h6>
-                            <label for="male-radio"  style="font-size: 12px;"> Male </label>
-                            <input class = "form-check-input" name = "gender" value = "male" type="radio" id="male-radio" required>
-                            <label for="female-radio" style="font-size: 12px;"> Female </label>
-                            <input class = "form-check-input" name = "gender" value = "female" type="radio" id="female-radio">
-                        </label>
-                        <input type="phone" placeholder="Phone number">
-                        <input type="email" placeholder="E-mail" autocomplete="username" required>
-                        <input type="password" placeholder="Password" autocomplete="new-password" required>
-                        <input type="password" placeholder="Confirm Password" autocomplete="new-password" required>
-                        <div class="privacy-agreement">
-                            By signing up you commit that you read and agreed with our <a href="" target="_blank">
-                                privacy </a> and <a href="" target="_blank"> policy </a>
-                        </div>
-                        <input type="submit" value="Sign up" class="sign-up-submit sign-buttons btn btn-primary">
-                        </input>
-
-                    </form>
-                    <form action="" class="sign-in-form sign-form" onsubmit=" reset() ;return false">
-
-                        <h3> Welcome back </h3>
-                        <p> Nice to see you again </p>
-                        <input type="email" name = "email" placeholder="E-mail" autocomplete="username" required>
-                        <input type="password" name = "password" placeholder="Password" autocomplete="current-password" required>
-                        <div class="remember-me">
-                            <label>
-                                <input type="checkbox" name="">
-                                Remember me
-                            </label>
-                            <a href="reset-password.html"> <span> Forgot password? </span></a>
-                        </div>
-                        <input type="submit" value="Sign in"
-                            class="sign-up-submit sign-buttons btn btn-primary"></input>
-
-                    </form>
-                    <p class="or-use"> Or use <span class="line-l line"></span> <span class="line-r line"></span>
-                    </p>
-                    <div id="sign-up-with-buttons" class=" my-3">
-                        <button class="sign-buttons ">
-                            <img width="25" height="25" src="https://img.icons8.com/color/48/google-logo.png"
-                                alt="google-logo" />
-                            Google
-                        </button>
-                        <button class="sign-buttons ">
-                            <img width="25" height="25" src="https://img.icons8.com/color/48/facebook-circled--v1.png"
-                                alt="facebook-circled--v1" />
-                            Facebook </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="details-side" class="d-flex justify-content-center align-items-center">
-            <a href="index.html" class="logo w-75 h-75  modal-logo">
-                <div class="logo w-100 h-100"><img class="w-100 h-100" src="./assets/media/images/logo.ng.png"
-                        alt="ink waves logo">
-                </div>
-            </a>
-            <form action="" class="enter-ur-mail sign-form hidden">
-                <h4 class='ur-mail-header'>Insert Your Mail </h4>
-                <input type="email" placeholder="E-mail" autocomplete="username">
-                <input type="submit" value="Send" class="btn btn-primary send">
-            </form>
-            <div class="activation-code hidden">
-                <p> We have sent you a code on your Mail, please insert it</p>
-                <input type="number" name="" id="">
-                <input type="submit" value="Submit" class=" submit-code btn btn-primary">
-                <p class="m-0"> You should receive a code within </p>
-                <span class="timer"> Time </span>
-                <button class="Send-another-btn btn btn-primary" disabled> Send another</button>
-            </div>
-
-            <!--             <div class="details-box"> This is a details box </div>
-            <div class="details-box"> This is a details box </div>
-            <div class="details-box"> This is a details box </div>
-            <div class="details-box"> This is a details box </div>
-            <div class="details-box"> This is a details box </div>
-
-            <ul class="bullets"> </ul> -->
-
-        </div>
+       
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <!--  Initiate header and navbar  -->
     <div class="background-opacity hidden"></div>
-    <div class="upper-page">
-        <div class="container">
-            <div class="header ">
-
-                <a href="index.html" onclick="goHome()">
-                    <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
-                        <span style="font-family:  cairo; font-weight: bold; color: rgb(17, 78, 114);">InkWaves</span>
-
-                    </div>
-                </a>
-                <div class="header-content">
-                    <div class="search">
-                        <input type="search" placeholder="Search" class="search-bar">
-                        <!-- <i id = "glass-icon" class="fa-solid fa-magnifying-glass search-icon"></i> -->
-                    </div>
-                   <a href="cart.html" class = "cart-anchor"> <i class="fa-solid fa-cart-shopping cart-icon"></i> <span class="number-of-products-in-cart">1</span> </a> 
-                    <i class="fa-solid fa-bookmark header-bookmark"></i>
-                    <button class="header-sign-btns" id="header-sign-in-btn"> Sign in</button>
-                    <button class="header-sign-btns" id="header-sign-up-btn"> Sign up</button>
-                </div>
-
-            </div>
-            <nav class="navbar">
-                <ul class="">
-                    <li>
-                    <a href="" id="a-1" itemName="print" class="listitem">
-                        
-                        Print
-                    </a>
-                </li>
-                <li>
-                    <a href="book-details.html" id="a-1" itemName="print" class="listitem">
-                         Book details 
-                    </a>
-                </li>
-                <li>
-                    <a href="user-dashboard.html" id="a-1" itemName="print" class="listitem">
-                        User dashboard 
-                    </a>
-                </li>
-                <li>
-                    <a href="" id="a-2" itemName="book-store" class="listitem">
-                        Book store
-                    </a>
-                </li>
-                <li>
-                    <a href="reset-password.html" itemName="3" id="a-3" class="listitem">
-                        Reset pass
-                    </a>
-                </li>
-                <li>
-                    <a href="update-pass.html" itemName="3" id="a-3" class="listitem">
-                        update pass
-                    </a>
-                </li>
-                <li>
-                    <a href="" id="a-4" itemName="4" class="listitem">
-                        Listitem
-                    </a>
-                </li>
-                <li>
-                    <a href="" id="a-5" itemName="privacy-and-conditions" class="listitem">
-                        Privacy and 
-                    </a>
-                </li>
-                <li>
-                    <a href="" id="a-6" itemName="about" class="listitem">
-                         About Ink Wave 
-                    </a>
-                </li>
-                </ul>
-            </nav>
-            <div id="subsections-div" class="sub-divs-container hidde width-100% ">
-                <div id="subsection-print" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-                <div id="subsection-book-store" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-                <div id="subsection-privacy-and-conditions" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-                <div id="subsection-about" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-                <div id="subsection-4" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-                <div id="subsection-5" class="subsection">
-                    <div class="sub-links">
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                        <p class="sub-link"> Here is the sublink</p>
-                    </div>
-                    <div class="boxes-side">
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                            <p class="box-description"> this is a short description</p>
-                        </a>
-                        <a href="" class="box">
-                            <h6 class="box-title">Box Title </h6>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+    <div class="upper-page"> </div>
 
     <div id="landing-page">
 
 
         <!-- ---------------------------------------------------------------Initiate hero section -->
-        <section class="hero" sectionOf="hero">
+        <div class="hero" sectionOf="hero">
             <div class="container">
                 <div class="hero-content">
                     <h3>All your printing and book selling services <br>in one place</h3>
@@ -357,7 +61,7 @@
                 </div>
             </div>
 
-        </section>
+        </div>
 
         <div class="hero-nav-container">
             <ul class="hero-nav container">
@@ -368,144 +72,24 @@
 
 
         <!-- ---------------------------------------------------------------Initiate Recent books-->
-        <section class="recent-books section" sectionOf="recent-books" sectionTitle="Recent books">
-            <div class="container">
-                <div class="section-header">
-                    <h3> Recently added books</h3>
-                </div>
-                <div class="books-holder">
-                    <span class="left-arrow slider-arrow slider-l-arrow"><i class="fa-solid fa-caret-left"></i></span>
-                    <span class="right-arrow slider-arrow slider-r-arrow"><i class="fa-solid fa-caret-right"></i></span>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- For eahc book get the book name go get that image of the same name and assign it as a background image  -->
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <!-- <img src="./assets/media/images/books Carousel/wonderblood.jpg" alt=""> -->
-                        <div class="book-details">
-                            <h5 class="book-title">The hunger games</h5>
-                            <p class="book-category">adventure</p>
-                            <span class="book-price"> 120 <span class="currency">LE</span> </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="position-changer">
-                    <input id="books-slider-range-Input" type="range" min="0" step="1">
-                    <div class="carousel-arrows hidden">
-                        <span class="left-arrow"><i class="fa-solid fa-caret-left"></i></span>
-                        <span class="right-arrow"><i class="fa-solid fa-caret-right"></i></span>
-                    </div>
-                </div>
-            </div>
-
-
-
+        
+        <section class="recent-books section d-flex justify-content-center align-items-center" sectionOf="recent-books" sectionTitle="Recent books">
+            <div class="spinner-border loader" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
         <!-- ------------------------------------------------------------ Initiate Printing Services description ------------------------------------------->
         <section id="our-printing-advantages" class="section" sectionOf="printing-advantages"
             sectionTitle="Printing advantages">
+            <div class="section-header d-flex justify-content-center align-items-center flex-column ">
+                <div class="narrower-container w-50 p-5 text-center">
+                    <h2>We provide the best printing services for you</h2>
+                <p>Customers can choose any of the secure and fast payments methods available in the platform. We accept payment by credit card and wallet. You can add money to your wallet by the bank transfer or the credit card..</p>
+                </div>
+            </div>
             <div class="container ">
+               
                 <div class="advantage-box">
                     <img class="advantage-box-img"
                         src="https://www.moo.com/.imaging/scale/dam/91378ec4-5460-4dc6-bbf5-e65b941858e8/CRB-5326-Printfinity-tile-752x376.jpg"
@@ -572,7 +156,6 @@
         </section>
 
         <!-- ------------------------------------------------------------ Initiate Printing options------------------------------------------->
-
         <section class="printing-options section" sectionOf="printing-options" sectionTitle="Printing options">
             <div class="container narrower-container">
                 <div class="section-header">
@@ -586,21 +169,28 @@
                     <div class="options-category">
                         <h5>Paper Size</h5>
                         <div class="category-options">
-                            <button class="option-btn paper-size-option-btn " text="A5"> A5 </button><button
-                                class="option-btn paper-size-option-btn active-option-btn" text="A4">A4</button><button
-                                class="option-btn paper-size-option-btn" text="A3">A3</button><button
-                                class="option-btn paper-size-option-btn" text="A2">A2</button><button
-                                class="option-btn paper-size-option-btn" text="A1">A1</button><button
-                                class="option-btn paper-size-option-btn" text="A0">A0</button>
+                            <button class="option-btn paper-size-option-btn " text="A5" data-chosen-option="A5"> A5
+                            </button>
+                            <button class="option-btn paper-size-option-btn active-option-btn" text="A4"
+                                data-chosen-option="A4">A4</button>
+                            <button class="option-btn paper-size-option-btn" text="A3"
+                                data-chosen-option="A3">A3</button>
+                            <button class="option-btn paper-size-option-btn" text="A2"
+                                data-chosen-option="A2">A2</button>
+                            <button class="option-btn paper-size-option-btn" text="A1"
+                                data-chosen-option="A1">A1</button>
+                            <button class="option-btn paper-size-option-btn" text="A0"
+                                data-chosen-option="A0">A0</button>
                         </div>
 
                     </div>
                     <div class="options-category paper-type">
                         <h5>Paper type</h5>
                         <div class="category-options">
-                            <button class="option-btn active-option-btn "> Normal </button><button class="option-btn">
-                                Glossy</button><button class="option-btn">Sticker</button><button
-                                class="option-btn">Thick</button>
+                            <button class="option-btn active-option-btn" data-chosen-option="normal"> Normal </button>
+                            <button class="option-btn">
+                                Glossy</button><button class="option-btn" data-chosen-option="sticker">Sticker</button>
+                            <button class="option-btn">Thick</button>
 
                         </div>
 
@@ -608,8 +198,8 @@
                     <div class="options-category printing-color">
                         <h5>Printing Color</h5>
                         <div class="category-options">
-                            <button class="option-btn active-option-btn"> Black </button> <button
-                                class="option-btn">Color</button>
+                            <button class="option-btn active-option-btn" data-chosen-option="black"> Black </button>
+                            <button class="option-btn" data-chosen-option="color">Color</button>
                         </div>
 
                     </div>
@@ -617,11 +207,16 @@
                     <div class="options-category printing-layout">
                         <h5>Printing Layout</h5>
                         <div class="category-options printing-layout-options">
-                            <img src="./assets/media/images/printing options/label (1).png" alt="printing layout 1">
-                            <img src="./assets/media/images/printing options/label (2).png" alt="printing layout 2">
-                            <img src="./assets/media/images/printing options/label (3).png" alt="printing layout 3">
-                            <img src="./assets/media/images/printing options/label (4).png" alt="printing layout 4">
-                            <img src="./assets/media/images/printing options/label (5).png" alt="printing layout 5">
+                            <img src="./assets/media/images/printing options/label (1).png" alt="printing layout 1"
+                                class="printing-layout-img" data-chosen-option="single">
+                            <img src="./assets/media/images/printing options/label (2).png" alt="printing layout 2"
+                                class="printing-layout-img" data-chosen-option="double-tall">
+                            <img src="./assets/media/images/printing options/label (3).png" alt="printing layout 3"
+                                class="printing-layout-img" data-chosen-option="quadrant-tall">
+                            <img src="./assets/media/images/printing options/label (4).png" alt="printing layout 4"
+                                class="printing-layout-img" data-chosen-option="double-short">
+                            <img src="./assets/media/images/printing options/label (5).png" alt="printing layout 5"
+                                class="printing-layout-img" data-chosen-option="quadrant-short">
                         </div>
 
                     </div>
@@ -629,8 +224,8 @@
                     <div class="options-category printing-side">
                         <h5>Printing side</h5>
                         <div class="category-options">
-                            <button class="option-btn active-option-btn"> 1-Side </button> <button
-                                class="option-btn">2-Sided</button>
+                            <button class="option-btn active-option-btn"> 1-Side </button>
+                            <button class="option-btn">2-Sided</button>
                         </div>
 
                     </div>
@@ -721,9 +316,8 @@
                 </div>
             </div>
         </section>
+       
         <!-- ------------------------------------------------------------ Initiate How I Print------------------------------------------->
-
-
         <section class="how-i-print" sectionOf="how-i-print" sectionTitle="How i print?">
             <div class="container">
                 <img class="printing-steps-img" src="./assets/media/images/pseudo.png" alt="">
@@ -733,7 +327,7 @@
                     <div class="steps">
 
                         <div class="step">
-                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <span><i class="fa-solid fa-file-import step-icon"></i></span>
                             <div class="step-instructions">
                                 <h5> Upload your document</h5>
                                 <p>Login to your account after signing up and upload your PDF document to be printed.
@@ -741,7 +335,7 @@
                             </div>
                         </div>
                         <div class="step">
-                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <span><i class="fa-solid fa-filter step-icon"></i></span>
                             <div class="step-instructions">
                                 <h5>Select Printing Option</h5>
                                 <p>Select printing options like type of printing, colors, type of binding and delivery
@@ -749,14 +343,14 @@
                             </div>
                         </div>
                         <div class="step">
-                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <span><i class="fa-solid fa-cart-arrow-down step-icon"></i></span>
                             <div class="step-instructions">
                                 <h5>Make Your Order</h5>
                                 <p>Place your order securely using your Visa Card, Master Card or your Print Wallet.</p>
                             </div>
                         </div>
                         <div class="step">
-                            <span><i class="fa-solid fa-print step-icon"></i></span>
+                            <span><i class="fa-solid fa-truck step-icon"></i></span>
                             <div class="step-instructions">
                                 <h5>Get Your Documents</h5>
                                 <p>Get your documents delivered to you by any of the delivery options offered on the
@@ -797,11 +391,18 @@
     </div>
 
     <!-- ------------------------------------------------------------ Initiate publish ------------------------------------------->
-    <section class="publish" sectionOf="publish">
-
+    
+    <!-- ------------------------------------------------------------ Initiate Testimonials ------------------------------------------->
+    <section class="testimonials section" sectionOf="testimonials" sectionTitle="Testimonials">
+       
     </section>
+
+      
+      <!-- rating.js file -->
+      <script src="js/addons/rating.js"></script>
     <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
-    <section class="attract-user attract-user-talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
+    <section class="attract-user attract-user-talk-with-us section" sectionOf="talk-with-us"
+        sectionTitle="talk with us">
         <div class="container">
             <h4> Get to Know us more </h4>
             <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>
@@ -811,132 +412,22 @@
             </div>
         </div>
     </section>
-    <!-- ------------------------------------------------------------ Initiate Footer------------------------------------------->
 
-    <footer>
-        <div class="container">
-
-            <div class="left-footer">
-                <div class="left-footer-logo">
-                    <a href="index.html">
-                        <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
-                        </div>
-                    </a>
-                    <p> We provide best printing and book selling service </p>
-                </div>
-                <div class="left-footer-details">
-                    <h6>Get our app on</h6>
-                    <a href=""><i class="fa-brands fa-app-store-ios me-4"></i></a>
-                    <a href=""><i class="fa-brands fa-google-play"></i></a>
-                </div>
-            </div>
-
-            <div class="middle-footer ">
-                <ul class=" footer-list">
-                    <a href="" id="a-1" class="footer-listitem">
-                        <li> Print </li>
-                    </a>
-                    <a href="" id="a-2" class="footer-listitem">
-                        <li>Book store</li>
-                    </a>
-                    <a href="" id="a-3" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-4" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-5" class="footer-listitem">
-                        <li> Privacy and </li>
-                    </a>
-                    <a href="" id="a-6" class="footer-listitem">
-                        <li>About Ink Waves</li>
-                    </a>
-                    <a href="" id="a-1" class="footer-listitem">
-                        <li> Print </li>
-                    </a>
-                    <a href="" id="a-2" class="footer-listitem">
-                        <li>Book store</li>
-                    </a>
-                    <a href="" id="a-3" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-4" class="footer-listitem">
-                        <li>Listitem</li>
-                    </a>
-                    <a href="" id="a-5" class="footer-listitem">
-                        <li> Privacy and </li>
-                    </a>
-                    <a href="" id="a-6" class="footer-listitem">
-                        <li>About Ink Waves</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="right-footer">
-
-                <h3> Our vision</h3>
-                <p>Our mission is to be the leading digital marketplace in Africa, providing a platform for businesses
-                    of all sizes to reach</p>
-                <p>Our mission is to be the leading digital marketplace for independent publishers, providing them with
-                    a platform to reach customers world</p>
-            </div>
-
-
-
-        </div>
-        <div class="subfooter " style="height: 50px;">
-            <div class=" d-flex justify-content-center align-items-center flex-column">
-                <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
-                    <li> <a href="" target="_blank"> <i
-                                class="fa-brands fa-facebook"> </i> </a> </li>
-
-
-                    <li> <a href="mailto" target="_blank"> <i class="fa-solid fa-at"></i> </a>
-                    </li>
-                    <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
-                                style='font-weight:600;'></i>
-                        </a></li>
-                    <li> <a href="tel:+20" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
-                        </a></li>
-                    <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                    <li><a href=""> <i class="fa-solid fa-tree"></i></a></li>
-                </ul>
-                <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
-            </div>
-        </div>
-       <!--  <div class="subfooter " style="height: 50px;">
-            <div class=" d-flex justify-content-center align-items-center flex-column">
-                <ul class="d-flex gap-3 px-0 my-0 footer-social-list">
-                    <li> <a href="https://www.facebook.com/Alphauseracc" target="_blank"> <i
-                                class="fa-brands fa-facebook"> </i> </a> </li>
-
-
-                    <li> <a href="mailto:amduseracc@gmail.com" target="_blank"> <i class="fa-solid fa-at"></i> </a>
-                    </li>
-                    <li><a href="https://wa.me/+201555807058" target="_blank"> <i class="fa-brands fa-whatsapp"
-                                style='font-weight:600;'></i>
-                        </a></li>
-                    <li> <a href="tel:+201555807058" target="_blank"> <i class="fa-solid fa-square-phone-flip"></i>
-                        </a></li>
-                    <li> <a href="https://github.com/AHMADHASEEB96" target="_blank"> <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                    <li><a href="https://linktr.ee/ahmadhaseeb"> <i class="fa-solid fa-tree"></i></a></li>
-                </ul>
-                <p id="copyrights-p" class="my-0"> All rights reserved for InkWaves platform <span> </span> </p>
-            </div>
-        </div> -->
-    </footer>
+    <!-- ------------------------------------------------------------ Initiate Footer ------------------------------------------->
+    <footer></footer>
 
     <!-- js bundle -->
     <!-- summon the font awesome library -->
     <script src="assets/js/fa-js/all.min.js"></script>
     <!-- summon the bootstrap toolkit -->
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.js"></script>
-    <!-- summon the app file -->
-    <script src="assets/js/app.js"></script>
+    <script src="assets\js\bootstrap\bootstrap.min.js"></script>
+    <script src="assets\js\bootstrap\bootstrap.min.js.map"></script>
+    <!-- summon the js scripts -->
+    <script type = "module" src="assets/js/sharedJs/books-slider.js"></script>
+    <script src="assets/js/sharedJs/header-footer-and-sign-modal.js"></script>
+    <script src="assets/js/sharedJs/testimonials.js"></script>
+    <script type = "module" src="assets/js/app.js"></script>
+
     <!-- <script src="assets/js/bootstrap.min.js.map"></script> -->
 </body>
 

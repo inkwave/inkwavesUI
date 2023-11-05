@@ -1,0 +1,1 @@
+Because the HTML files are stored inside a folder [pages]  you have to use [../] before the [assets] folder name 

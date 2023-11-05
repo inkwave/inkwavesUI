@@ -821,11 +821,12 @@ nav ul li:hover {
 
 .slider-r-arrow {
   right: 20px;
+  /* background-image : url('https://picsum.photos/1040.jpg'); */
 }
 
 .recent-books .container .books-holder .book {
   position: absolute;
-  background-image: url("/assets/media/images/books\ Carousel/wonderblood.jpg");
+  /* background-image: url("/assets/media/images/books\ Carousel/wonderblood.jpg"); */
   width: 300px;
   height: 400px;
   /* padding: 5px; */
@@ -1101,7 +1102,7 @@ section#our-printing-advantages {
 }
 
 .printing-steps .steps .step span {
-  background-color: #0097b2;
+  /* background-color: #0097b2; */
   padding: 15px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1111,7 +1112,7 @@ section#our-printing-advantages {
 }
 
 .printing-steps .steps .step span .step-icon {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .printing-steps .steps .step {
@@ -1128,7 +1129,74 @@ section#our-printing-advantages {
 
 }
 
-/* ----------------- Initial Talk with us ----------------- */
+/*#region ----------------- Initiate Testimonials ----------------- */
+section.testimonials {
+  height: 400px;
+  padding: 0;
+}
+section.testimonials .container {
+  background-image: url('https://www.moo.com/.imaging/scale/dam/23d24db3-f25f-4496-9297-11714c75fc68/0397WF-BIWT-3840x1000-life-at-moo-parent-page.jpg');
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 70%;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+}
+.testimonial .reviewer-image {
+  width: 700px;
+  height: 100%;
+  background-image:
+  url('https://static1.squarespace.com/static/5a7a523b90bccea7812ba94e/t/5f99c2bb95a80d03b4034df7/1603912419031/_Sarah+is+soothing+like+warm+butter+%26+honey%21_+%281%29.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-color: red;
+  border-radius: 10px 0 0 10px  ;
+  -webkit-border-radius: 10px 0 0 10px  ;
+  -moz-border-radius: 10px 0 0 10px  ;
+  -ms-border-radius: 10px 0 0 10px  ;
+  -o-border-radius: 10px 0 0 10px  ;
+}
+.reviewer {
+  
+}
+.reviewed-on {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+}
+.reviewed-on svg {
+  font-size: 50px;
+
+}
+.review-left-icon ,
+.review-right-icon {
+  /* position: absolute; */
+  font-size: 30px;
+  color: white;
+}
+.review-arrows-div { position: absolute; right :50px ; bottom : 0px;}
+/* .review-right-icon {right :20px ; bottom : 0px;} */
+
+/*#endregion  */
+
+
+
+/*#region ----------------- Initial Talk with us ----------------- */
 .attract-user .container {
   height: 300px;
   background-image: url("https://www.moo.com/dam/jcr:8f0315da-4b0b-4a4c-a140-724a370b075b/0585WF-CTA-1176x578-intercom1.jpg");
@@ -1536,3 +1604,6 @@ padding: 0;
 
 
 /* #endregion */
+
+
+
