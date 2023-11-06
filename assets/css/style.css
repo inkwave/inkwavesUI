@@ -826,13 +826,11 @@ nav ul li:hover {
 
 .recent-books .container .books-holder .book {
   position: absolute;
-  /* background-image: url("/assets/media/images/books\ Carousel/wonderblood.jpg"); */
+  background-image: url("/assets/media/images/books\ Carousel/wonderblood.jpg");
   width: 300px;
   height: 400px;
   /* padding: 5px; */
   display: flex;
-
-
 }
 
 .recent-books .container .books-holder .book img {

@@ -567,7 +567,7 @@ document
     await registerUser(userData);
   });
 
-async function getAllUserc() {
+/* async function getAllUserc() {
   let res = await fetch(
     "http://webstercassin1-001-site1.ftempurl.com/api/Users",
     {
@@ -580,7 +580,7 @@ async function getAllUserc() {
   );
   let data = await res.json();
   console.log(data);
-}
+} */
 //#endregion signup
 //#region ///////////////////////////////////////////// Login
 

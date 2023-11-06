@@ -13,3 +13,16 @@
  let myObject = { name: "John", age: 30 };
 let jsonString = JSON.stringify(myObject);
 // Result: '{"name":"John","age":30}'
+
+/*  when it comes to redirecting the user to another page some times it is better to use the anchor tag to use the advantages of the href attribute like 
+the inherited cursor pointer and the ability to open this link in another tap 
+another way to redirect is this  // window.location.href = `/pages/book-details.html?id=${book.id}`;
+ * Also it is a better approach to send the book id of the clicked book in the routing system to the details page and from there fetch this book using the id
+instead of just saving the whole object in the localStorage and then use it in the book details js again, because when the backend update the book details the update
+show to the user once he refreshes the page (because another fetch request will be made automatically) but if the book details are coming from the static saved data in
+the localStorage then no update happened unless the user reload the page that contains the book to be clicked it self by that a new fetch is done to get all the books to load
+them in hte slider or in the gallery. 
+*/
+
+// how to assign a class dynamically using js , this is a code inside innerHtml
+<div class="detail ${bookDetails.subDescription.weight?'': 'hidden'}"><span>Wight </span><span>${bookDetails.subDescription.weight}</span></div>

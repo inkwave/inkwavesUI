@@ -35,9 +35,9 @@ let books = document.querySelectorAll(`.book`);
 let booksFetchingUrl = "http://webstercassin1-001-site1.ftempurl.com/api/Items";
 // First hide the slider till the data comes from the server
 sliderContent.classList.add(`hidden`);
-getAllBook();
+getAllBooks();
 // fetch the server to get the books
-async function getAllBook() {
+async function getAllBooks() {
   try {
     let response = await fetch(booksFetchingUrl);
     let data = await response.json();
@@ -46,13 +46,15 @@ async function getAllBook() {
     // add books to the slider
     recentBooks.forEach((book) => {
       // for each book of the 20 books create a div with class book and insert it's data inside
-      let bookDiv = document.createElement("div");
+      let bookDiv = document.createElement("a");
       // once the div is clicked store the object to the local storage and go to the  book details page
       bookDiv.addEventListener(`click`, (_) => {
-        localStorage.setItem("selectedBook", JSON.stringify(book));
-        window.location.href = "/pages/book-details.html";
+        // send the it to the book details page using the routing system
+        // window.location.href = `/pages/book-details.html?id=${book.id}`;
+        // it is better to put the link in the anchor tag so that the user can open it in new tap if he want, to open many books in the same time to compare
       });
-
+      
+      bookDiv.setAttribute('href',  `/pages/book-details.html?id=${book.id}`) 
       bookDiv.classList.add(`book`);
       bookDiv.style.cssText = ` background-image: url('${book.image}') !important;`;
       bookDiv.innerHTML = `
@@ -147,9 +149,7 @@ async function getAllBook() {
       }
     }
 
-    /* leftArrow.addEventListener(`click`,changeRangePosition)
-rightArrow.addEventListener(`click`,changeRangePosition) 
-*/
+  
     function changeRangePosition() {
       sliderRanger.value = `${basePosition}`;
       console.log(sliderRanger.value);
@@ -159,13 +159,10 @@ rightArrow.addEventListener(`click`,changeRangePosition)
   }
 }
 
-books.forEach((book) => {
-  document.body.style.backgroundImage = `url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699056000&semt=sph')`;
-});
 // code that depends on the data to be coming from the serve needs to be inside the async function not after it.
 // Also never forget to always update the NodList after each item that will be created dynamically is created.
 //#endregion
-let toExport = "Ahmad Is my Name";
+/* let toExport = "Ahmad Is my Name";
 export { bookData };
-
+ */
 //  document.body.cssText = `background-image : url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699056000&semt=sph")`
