@@ -180,7 +180,7 @@ input {
   -o-border-radius: 15px;
   /* box-shadow:inset rgba(9, 30, 66, 0.25) 5px 5px 5px, inset rgba(9, 30, 66, 0.13) 5px 5px 5px; */
 
-  z-index: 1001;
+  z-index: 9000;
   /* above all */
 }
 
