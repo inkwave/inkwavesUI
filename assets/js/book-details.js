@@ -5,6 +5,7 @@
 // console.log(selectedBook)
 
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////////////// Book details Functionality
+const bookDetailsSection = document.querySelector(`.book-details-sec`);
 
 // once tha pge is loaded load the clicked book details
 // get the book id  from the routing system.
@@ -24,8 +25,7 @@ let bookDetails = await getBook();
 console.log(bookDetails);
 if (bookDetails) {
   // then implement the elements after integrating them with the received data to the page
-  const bookDetailsSection = document.querySelector(`.book-details-sec`);
-  bookDetailsSection.innerHTML = `       <div class="container">
+  bookDetailsSection.innerHTML = `<div class="container">
 <div class="book-representation p-3 d-flex">
     <div class="book-gallery">
         <div class="main-image-div">
@@ -150,8 +150,7 @@ if (bookDetails) {
     <h5>About book</h5>
     <div class="further-details">
         <div class="detail"><span>Author </span><span>Dean Burnet</span></div>
-        <div class="detail"><span>Categories</span><span>${bookDetails.categorys.map(
-          (category) => category.name
+        <div class="detail"><span>Categories</span><span>${bookDetails.categorys.map((category) => category.name
           )}</span> </div>
           <div class="detail"><span>Publisher </span><span>Guardian Faber Publishing</span></div>
           <div class="detail ${
@@ -191,6 +190,9 @@ if (bookDetails) {
 
 
 </div>`;
+} else {
+  console.log('alerto')
+  bookDetailsSection.innerHTML = `<div class = 'd-flex justify-content-center align-items-center'> <h1>  Can not Find Data </h1> </div>`;
 }
 
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////////////// Book details Elements

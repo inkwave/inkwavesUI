@@ -26,3 +26,7 @@ them in hte slider or in the gallery.
 
 // how to assign a class dynamically using js , this is a code inside innerHtml
 <div class="detail ${bookDetails.subDescription.weight?'': 'hidden'}"><span>Wight </span><span>${bookDetails.subDescription.weight}</span></div>
+
+/* 
+You can store an input's value into a variable to use it to assign it's value to other variables or use it in expressions, but to send a value back
+to this input you need  to use the input.value instead  */

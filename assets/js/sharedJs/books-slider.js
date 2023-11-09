@@ -42,6 +42,7 @@ async function getAllBooks() {
     let response = await fetch(booksFetchingUrl);
     let data = await response.json();
     // get the first 20 books
+    // console.log(data.data)
     let recentBooks = data.data.slice(0, 20);
     // add books to the slider
     recentBooks.forEach((book) => {

@@ -1,4 +1,6 @@
   `use strict`;
+  // import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
   let testModularity = "log this message to the console"
   // export { testModularity }
 // *************** ELEMENTS

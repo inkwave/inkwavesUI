@@ -1,0 +1,1 @@
+The z-index property works with the position property, the elements with a position property will always stack over others even if they have lower z-index ranking 

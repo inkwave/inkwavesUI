@@ -4,18 +4,18 @@ function renderUpperSignButtons() {
   return ` <div class = "upper-sign-btns"> 
   <button class="header-sign-btns mx-2" id="header-sign-in-btn"> Sign in</button>
   <button class="header-sign-btns" id="header-sign-up-btn"> Sign up</button>
-</div>`
+</div>`;
 }
 function renderUpperUserData() {
   return `<div class = "upper-logged-user hidden"> 
   <i class="fa-solid fa-circle-user user-account"></i>
   <i class="fa-solid fa-right-from-bracket user-log-out"></i>
-</div>`
+</div>`;
 }
-let userInfo = JSON.parse(window.localStorage.getItem(`userInfo`))
- if (userInfo){
-  console.log(userInfo)
- };
+let userInfo = JSON.parse(window.localStorage.getItem(`userInfo`));
+if (userInfo) {
+  console.log(userInfo);
+}
 // console.log(window.localStorage.getItem(`userInfo`))
 document.querySelector(`.upper-page`).innerHTML = `<div class="container">
 <div class="header ">
@@ -43,9 +43,20 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
        <div class = "upper-logged-user d-flex justify-content-center align-items-center hidden"> 
          <div class = "user-in-header"> 
          <i class="fa-solid fa-circle-user user-account"></i>
-         ${userInfo.name}
+         <!-- ${userInfo.name} -->
+         <div class = "user-window  ">
+        <ul> 
+
+<li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-table-columns"></i>  Dashboard  </a> </li>
+<li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-handshake"></i> My Orders  </a> </li>
+<li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-marker"></i> Update info  </a> </li>
+<hr>
+<li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-right-from-bracket"></i> Log out </a> </li>
+
+        </ul>  
         </div>
-         <i class="fa-solid fa-right-from-bracket user-log-out  ms-2"></i>
+        </div>
+         <!-- <i class="fa-solid fa-right-from-bracket user-log-out  ms-2"></i> -->
        </div>
 
     </div>
@@ -60,17 +71,17 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
             </a>
         </li>
         <li>
-            <a href="/pages/book-details.html" id="a-1" itemName="print" class="listitem">
+            <a href="/pages/book-details.html" id="a-1" itemName="book-details" class="listitem w-100">
                 Book details
             </a>
         </li>
         <li>
-            <a href="/pages/user-dashboard.html" id="a-1" itemName="print" class="listitem">
+            <a href="/pages/user-dashboard.html" id="a-1" itemName="user-dashboard" class="listitem">
                 User dashboard
             </a>
         </li>
         <li>
-            <a href="" id="a-2" itemName="book-store" class="listitem">
+            <a href="/pages/book-store.html" id="a-2" itemName="book-store" class="listitem">
                 Book store
             </a>
         </li>
@@ -101,10 +112,47 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
         </li>
     </ul>
 </nav>
-<div id="subsections-div" class="sub-divs-container hidde width-100% ">
+<!-- <div id="subsections-div" class="sub-divs-container hidden width-100% "> -->
     <div id="subsection-print" class="subsection">
         <div class="sub-links">
+          
+            <p class="sub-link"> Here is the sublink print</p>
             <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink</p>
+        </div>
+        <div class="boxes-side">
+            <a href="" class="box">
+                <h6 class="box-title">Box Title </h6>
+                <p class="box-description"> this is a short description</p>
+            </a>
+            <a href="" class="box">
+                <h6 class="box-title">Box Title </h6>
+            </a>
+        </div>
+    </div>
+    <div id="subsection-book-details" class="subsection">
+        <div class="sub-links">
+          
+            <p class="sub-link"> Here is the sublink print</p>
+            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink</p>
+        </div>
+        <div class="boxes-side">
+            <a href="" class="box">
+                <h6 class="box-title">Box Title </h6>
+                <p class="box-description"> this is a short description</p>
+            </a>
+            <a href="" class="box">
+                <h6 class="box-title">Box Title </h6>
+            </a>
+        </div>
+    </div>
+    <div id="subsection-user-dashboard" class="subsection">
+        <div class="sub-links">
+          
+            <p class="sub-link"> Here is the sublink print</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
@@ -121,7 +169,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
     </div>
     <div id="subsection-book-store" class="subsection">
         <div class="sub-links">
-            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink store</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
@@ -141,7 +189,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
     </div>
     <div id="subsection-privacy-and-conditions" class="subsection">
         <div class="sub-links">
-            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink conditions</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
@@ -158,7 +206,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
     </div>
     <div id="subsection-about" class="subsection">
         <div class="sub-links">
-            <p class="sub-link"> Here is the sublink</p>
+            <p class="sub-link"> Here is the sublink about</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
             <p class="sub-link"> Here is the sublink</p>
@@ -207,7 +255,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
             </a>
         </div>
     </div>
-</div>
+<!-- </div> -->
 </div>`;
 //#endregion
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// Upper page Elements
@@ -225,9 +273,26 @@ const headerSignInBtn = document.getElementById(`header-sign-in-btn`);
 const headerSignUpBtn = document.getElementById(`header-sign-up-btn`);
 const userLogOut = document.querySelector(`.user-log-out`);
 const userAccount = document.querySelector(`.user-account`);
+console.log(userAccount);
+const userWindow = document.querySelector(`.user-window `);
+const userWindowUl = document.querySelector(`.user-window ul`);
 const upperLoggedUser = document.querySelector(`.upper-logged-user`);
 //#endregion
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// upper Page Functionalities
+//Reveal user window on click, with animation effect
+upperLoggedUser.addEventListener(`click`, revealUserWindow);
+function revealUserWindow() {
+  if (userWindow.clientHeight == 0) {
+    userWindow.style.padding = `40px`; // if padding was added using css then the client height would not be zero
+    userWindow.style.height = `${userWindow.scrollHeight + 50}px`;
+    userWindow.style.border = `1px solid #eee`;
+  } else {
+    userWindow.style.padding = `0px`; // to make sure there is no padding making clientHeight != zero
+    userWindow.style.height = "0px";
+    userWindow.style.border = `none`;
+  }
+}
+
 headerSignInBtn.addEventListener(`click`, function () {
   bodyOverlay.classList.remove(`hidden`);
   signModal.classList.toggle(`hidden`);
@@ -243,48 +308,43 @@ headerSignUpBtn.addEventListener(`click`, function () {
   revealSignUpForm();
 });
 //#region //////////////////////////////////////////////////////////////////////////////////////// Nav bar
-subsections.forEach((ss) => ss.classList.add("hidden"));
-listItems.forEach((li) => {
-  // li fills all the space between each others
-  li.style.width = `${navbar.clientWidth / listItems.length}px`;
-  // li.style.textAlign = "center";
-  const itemIs = li.getAttribute(`itemName`);
-  li.addEventListener("mouseover", function () {
-    // subsectionsDiv.classList.remove('hidden')
-    subsections.forEach((ss) => {
-      if (ss.id == `subsection-${itemIs}`) {
-        opacityBG.classList.add(`reveal-background-opacity`);
-        opacityBG.classList.remove(`hidden`);
-        subsectionsDiv.classList.remove(`hidden`);
-        subsectionsDiv.classList.add(`show`);
-        subsections.forEach((ss) => ss.classList.add("hidden"));
-        ss.classList.remove(`hidden`);
-        ss.classList.add(`show`);
-        animateHeight(subsectionsDiv);
-      }
-      li.addEventListener("mouseout", function () {
-        // subsectionsDiv.classList.add('hidden')
-        subsectionsDiv.classList.add(`hidden`);
-        opacityBG.classList.add(`hidden`);
-        ss.classList.add(`hidden`);
-      });
-      // opacityBG.classList.add(`reveal-background-opacity`)
+// subsections.forEach((ss) => ss.classList.add("hidden"));
+console.log(subsections)
+subsections.forEach((subS) => {
+  // hide all subsections
+  subS.classList.add("hidden");
+  // link this section to the related listitem
+  // get the last word from the subsection id which is the same like the value of the attribute itemName in the listitem
+  let listItemName = subS.id.slice(11) // slice from 11 to the end
+  let currentLI = document.querySelector(`[itemName = '${listItemName}']`) // target the related listitem
+  if (currentLI != null) { // make sure there is a related list item first
+    currentLI.addEventListener("mouseover", function () { // when hovering 
+      subS.classList.remove(`hidden`); // reveal the current subsection
+      opacityBG.classList.remove(`hidden`); // reveal the overlay
+      opacityBG.classList.add(`reveal-background-opacity`);
+      // subS.style.height = `${subS.scrollHeight}px !important`
+      document.querySelector(`.hero`).style.transform = `translateY(${subS.clientHeight}px)` // translate the hero downward a space like the height of the subsection
+      animateHeight(subS);
+
     });
-  });
+  }
+ 
+// On hovering out do opposite
+  if (currentLI != null) {
+    currentLI.addEventListener("mouseout", function () {
+      subS.classList.add('hidden')
+      opacityBG.classList.add(`hidden`);
+      // move it back the same amount of space , to respond to the transition effect on the way back
+      document.querySelector(`.hero`).style.transform = `translateY(${-subS.scrollHeight}px)` 
+
+    });
+  }
+
 });
 
-subsectionsDiv.addEventListener("mouseover", function () {
-  subsectionsDiv.classList.remove(`hidden`);
-  opacityBG.classList.remove(`hidden`);
-});
-
-subsectionsDiv.addEventListener("mouseout", function () {
-  subsectionsDiv.classList.add(`hidden`);
-  opacityBG.classList.add(`hidden`);
-});
 subsections.forEach((ss) => {
   ss.addEventListener("mouseover", () => {
-    subsectionsDiv.classList.remove(`hidden`);
+    // subsectionsDiv.classList.remove(`hidden`);
     ss.classList.remove(`hidden`);
     opacityBG.classList.remove(`hidden`);
   });
@@ -295,6 +355,8 @@ subsections.forEach((ss) => {
     opacityBG.classList.add(`hidden`);
   });
 });
+
+// the previous approach of iterating over the subsections costed me less code than the one where I iterate over the list Items. 
 //#endregion
 //#endregion
 //#endregion upper page
@@ -515,20 +577,21 @@ const registerUser = async (userData) => {
 
     if (response.ok) {
       const data = await response.json();
-    // Handle the response from the backend
-    console.log("Registration successful:", data);
-      signUpSubmit.value = `Confirm Code Now`; signUpSubmit.style.backgroundColor = 'green';
-      countDown()
-
-
+      // Handle the response from the backend
+      console.log("Registration successful:", data);
+      signUpSubmit.value = `Confirm Code Now`;
+      signUpSubmit.style.backgroundColor = "green";
+      countDown();
     } else {
-      signUpSubmit.value = `Couldn't Sign up`; signUpSubmit.style.backgroundColor = 'red';
-      setTimeout( _ => { signUpSubmit.value = `Try again`; signUpSubmit.style.backgroundColor = '#0b5ed7'; },3000)
+      signUpSubmit.value = `Couldn't Sign up`;
+      signUpSubmit.style.backgroundColor = "red";
+      setTimeout((_) => {
+        signUpSubmit.value = `Try again`;
+        signUpSubmit.style.backgroundColor = "#0b5ed7";
+      }, 3000);
 
       // throw new Error("Registration failed");
     }
-
-    
   } catch (error) {
     console.error("Error:", error.message);
   }
@@ -539,8 +602,7 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
     // getAllUserc();
-    signUpSubmit.value = `loading...`
-
+    signUpSubmit.value = `loading...`;
 
     const firstName = document.querySelector(
       'input[placeholder="First name"]'
@@ -588,7 +650,6 @@ document.querySelector(".sign-in-form").addEventListener("submit", (event) => {
   event.preventDefault();
   signInSubmit.value = `loading...`;
 
-
   const email = document.querySelector('input[name="lemail"]').value;
   console.log(email);
   const password = document.querySelector('input[name="lpassword"]').value;
@@ -600,8 +661,6 @@ document.querySelector(".sign-in-form").addEventListener("submit", (event) => {
 
   loginUser(userData);
 });
-
-
 
 const loginUser = async (userData) => {
   try {
@@ -623,8 +682,12 @@ const loginUser = async (userData) => {
     if (!data.succeeded) {
       messageToUser.textContent = "Wrong Email or password was inserted";
       messageToUser.style.color = "red";
-      signInSubmit.value = `Couldn't Sign in`; signInSubmit.style.backgroundColor = 'red';
-      setTimeout( _ => { signInSubmit.value = `Try again`; signInSubmit.style.backgroundColor = '#0b5ed7'; },3000)
+      signInSubmit.value = `Couldn't Sign in`;
+      signInSubmit.style.backgroundColor = "red";
+      setTimeout((_) => {
+        signInSubmit.value = `Try again`;
+        signInSubmit.style.backgroundColor = "#0b5ed7";
+      }, 3000);
 
       // remove loader
     } else {
@@ -632,10 +695,14 @@ const loginUser = async (userData) => {
       messageToUser.style.color = "green";
       // hide the modal to keep the user in the current page
       setTimeout(closeModal, 2000);
-      //update the submit button  
-      signInSubmit.value = `Signed in`; signInSubmit.style.backgroundColor = 'green';
+      //update the submit button
+      signInSubmit.value = `Signed in`;
+      signInSubmit.style.backgroundColor = "green";
       // store token
-      window.localStorage.setItem('userInfo', JSON.stringify({name: 'Ahmad Example'}))
+      window.localStorage.setItem(
+        "userInfo",
+        JSON.stringify({ name: "Ahmad Example" })
+      );
       // Update header
       upperSignBtns.classList.add(`hidden`);
       upperLoggedUser.classList.remove(`hidden`);
@@ -645,7 +712,6 @@ const loginUser = async (userData) => {
   }
 };
 //#endregion sign In
-
 
 //#endregion
 //#endregion
