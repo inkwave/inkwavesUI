@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- page icon -->
+        <link rel="icon" href="/assets/media/images/logo.ng.png">
+        <!-- Page title -->
+        <title> Ink waves </title>
+        <!-- css bundle -->
+        <!-- summon the font awesome library -->
+        <link rel="stylesheet" href="/assets/css/fa-css/all.min.css">
+        <!-- summon the bootstrap toolkit -->
+        <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css.map">
+        <!-- summon the normalization file -->
+        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <!-- summon the media query stylesheet -->
+        <link rel="stylesheet" href="/assets/css/style-media-query.css">
+        <!-- summon the stylesheet -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/contact.css">
+        <!-- summon the Fonts -->
+        <link rel="preconnect" href="../https://fonts.googleapis.com">
+        <link rel="preconnect" href="../https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400&family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,600;0,800;0,900;1,200;1,400;1,600&display=swap"
+            rel="stylesheet">
+    </head>
+<body>
+    <div class="heading">
+        <h1 style="padding: 10px; font-weight: 800;">Prefer to speak to a human?</h1> 
+        <h4 style="font-size: 20px;">For design expertise, savings or larger orders just fill in your details below,
+            and an account manager will be in touch</h4>
+    </div>
+ <section>
+    <div id="overlay">
+        <form onsubmit="event.preventDefault(); validateForm()">
+            <h1>Get in Touch</h1>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="your name">
+            <small class="error"></small>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="your email">
+            <small class="error"></small>
+
+            <label for="number">Number:</label>
+            <input type="number" id="number" placeholder="your phone number">
+            <small class="error"></small>
+
+            <label for="massege">Massege:</label>
+            <textarea type="text" id="massege" placeholder="your massege" rows="6"></textarea>
+            <small class="error"></small>
+
+            <div class="center">
+                <input type="submit" value="send massege" class="btn" onclick="openPopup()">
+                <div class="popup" id="popup">
+                    <img src="./404-tick.png" alt="">
+                    <h2>Thank you!</h2>
+                    <p>your detailes were successfully saved</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+                <br/>
+                <p id="success"></p>
+            </div>
+        </form>
+    </div>
+    
+    
+  </section>
+
+
+
+    <!-- js bundle -->
+    <!-- summon the font awesome library -->
+    <script src="assets/js/fa-js/all.min.js"></script>
+    <!-- summon the bootstrap toolkit -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/bootstrap/bootstrap.js"></script> -->
+    <!-- summon the app file -->
+    <script src="assets/js/app.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js.map"></script> -->
+    <script src="/assets/js/contact.js"></script>
+</body>
+
+</html>
