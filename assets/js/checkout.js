@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+// once the page loads make sure that the user came to this page using the checkout button and not any way else 
+if (!sessionStorage.getItem(`isUserCheckingOut`,`true`)) {
+  // alert('This page is not allowed')
+  // document.body.classList.add('hidden')
+  document.body.cssText = ' display: flex; justify-content: center ; align-items: center;'
+  document.body.innerHTML = ` <h1> Kindly sign in and checkout through the cart </h1>`
+ }
+
   //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// Elements
   const storedCredits = document.querySelectorAll(`[name = 'credit-card']`);
 
@@ -31,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// Functionalities
 
+  
   // choose credit
   storedCredits.forEach((credit) => {
     // for each stored credit , get the related radio input
@@ -46,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         relatedCvv.style.border = "1px solid green";
       } else {
         credit.setAttribute(`disabled`, ``);
+        placeOrderBtn.setAttribute(`disabled`, '')
         relatedCvv.style.border = "1px solid red";
       }
     };

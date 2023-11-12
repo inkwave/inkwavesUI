@@ -33,8 +33,9 @@
 
 
 
-    <div class="body-overlay hidden"></div>
-
+    <div class="body-overlay book-store-body-overlay hidden"></div>
+    <div class="spinner-border book-store-body-loader hidden" role="status">
+    </div>
     <!-- ---------------------------------------------------------------Initiate Sign Modal window -->
     <div id="sign-modal" class="hidden"></div>
 
@@ -42,11 +43,10 @@
     <div class="background-opacity hidden"></div>
     <div class="upper-page"></div>
 
-    <div id="landing-page">
 
 
-        <!-- ---------------------------------------------------------------Initiate hero section -->
-        <div class="hero" sectionOf="hero">
+    <!-- ---------------------------------------------------------------Initiate hero section -->
+    <!-- <div class="hero hidden" sectionOf="hero" >
             <div class="container">
                 <div class="hero-content">
                     <h3>All your printing and book selling services <br>in one place</h3>
@@ -59,42 +59,66 @@
                 </div>
             </div>
 
+        </div> -->
+
+    <div class="hero-nav-container">
+        <ul class="hero-nav container">
+            <li style="font-family:  cairo; font-weight: bold; color: cadetblue;" id="page-nav-logo">InkWaves</li>
+            <!-- List items appended dynamically -->
+        </ul>
+    </div>
+
+
+
+    <section class="book-store-sec section" sectionOf="Store" sectionTitle = 'Store'>
+        <div class="book-store-bar-container container border rounded">
+            <div class="books-store-options">
+                <div class="page-sizes-div">
+                    <h6 class = 'm-0'> Page size</h6>
+                    <div class="page-sizes d-flex gap-2"> <span class="page-size" value = '20'> 20 </span>  <span class="page-size" value = '40'> 40 </span> <span
+                            class="page-size" value = '60'> 60 </span><span class="page-size" value = '80'> 80 </span><span class="page-size" value = '100'> 100 </span>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <div class="container">
+            <div class="book-store-holder">
+                <aside class='book-categories-aside'>
+                    <div class='book-category' category-name='all'> <span> All </span> </div>
+                </aside>
 
-        <div class="hero-nav-container hidden">
-            <ul class="hero-nav container">
-                <li style="font-family:  cairo; font-weight: bold; color: cadetblue;" id="page-nav-logo">InkWaves</li>
-                <!-- List items appended dynamically -->
-            </ul>
-        </div>
-
-
-
-        <section class="book-store-sec section">
-            <div class="container">
-                <aside> </aside>
                 <div class="book-store">
+
                     <!-- JS Adds here  -->
                 </div>
             </div>
-        </section>
+            <div class="pagination">
+                <div class="spinner-border pagination-loader hidden" role="status">
+                </div>
+                <button class="previous-page pagination-btn btn "> Previous</button>
+                <input type="number" name="" value='1' class="pagination-page-number border">
+                <button class="next-page pagination-btn btn "> Next</button>
+            </div>
+        </div>
+    </section>
 
 
 
-        <!-- ------------------------------------------------------------ Initiate Footer ------------------------------------------->
-        <footer></footer>
+    <!-- ------------------------------------------------------------ Initiate Footer ------------------------------------------->
+    <footer></footer>
 
-        <!-- js bundle -->
-        <!-- summon the font awesome library -->
-        <script src="/assets/js/fa-js/all.min.js"></script>
-        <!-- summon the bootstrap toolkit -->
-        <script src="/assets\js\bootstrap\bootstrap.min.js"></script>
-        <script src="/assets\js\bootstrap\bootstrap.min.js.map"></script>
-        <!-- summon the js scripts -->
-        <script src="/assets/js/sharedJs/header-footer-and-sign-modal.js"></script>
-        <script type="module" src="/assets/js/book-store.js"></script>
+    <!-- js bundle -->
+    <!-- summon the font awesome library -->
+    <script src="/assets/js/fa-js/all.min.js"></script>
+    <!-- summon the bootstrap toolkit -->
+    <script src="/assets\js\bootstrap\bootstrap.min.js"></script>
+    <script src="/assets\js\bootstrap\bootstrap.min.js.map"></script>
+    <!-- summon the js scripts -->
+    <script src="/assets/js/sharedJs/header-footer-and-sign-modal.js"></script>
+    <script type="module" src="/assets/js/book-store.js"></script>
 
-        <!-- <script src="/assets/js/bootstrap.min.js.map"></script> -->
+    <!-- <script src="/assets/js/bootstrap.min.js.map"></script> -->
 </body>
 
 </html>

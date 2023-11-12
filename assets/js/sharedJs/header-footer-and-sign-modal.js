@@ -43,7 +43,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
        <div class = "upper-logged-user d-flex justify-content-center align-items-center hidden"> 
          <div class = "user-in-header"> 
          <i class="fa-solid fa-circle-user user-account"></i>
-         <!-- ${userInfo.name} -->
+         
          <div class = "user-window  ">
         <ul> 
 
@@ -51,7 +51,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
 <li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-handshake"></i> My Orders  </a> </li>
 <li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-marker"></i> Update info  </a> </li>
 <hr>
-<li> <a href = "/pages/user-dashboard.html"> <i class="fa-solid fa-right-from-bracket"></i> Log out </a> </li>
+<li style = "cursor: pointer;" class = "log-out">  <i class="fa-solid fa-right-from-bracket log-out"></i> Log out </li>
 
         </ul>  
         </div>
@@ -259,6 +259,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
 </div>`;
 //#endregion
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// Upper page Elements
+const logOut = document.querySelector(`.log-out`) 
 const bodyOverlay = document.querySelector(`.body-overlay`);
 const upperPage = document.querySelector(`.upper-page`);
 const subsectionsDiv = document.getElementById("subsections-div");
@@ -279,6 +280,22 @@ const userWindowUl = document.querySelector(`.user-window ul`);
 const upperLoggedUser = document.querySelector(`.upper-logged-user`);
 //#endregion
 //#region ////////////////////////////////////////////////////////////////////////////////////////////////////// upper Page Functionalities
+
+// Once the page loads update the header to show the user info if it was logged in (as long the token is stored in local or session storage).
+updateLoginUI()
+
+// remove the token from both local and session storages on clicking on logout 
+logOut.addEventListener(`click`, logUserOut)
+function logUserOut() {
+  localStorage.removeItem('token')
+  sessionStorage.removeItem('token')
+  //refresh the page to update the header 
+  window.location.reload();
+  // any way if the token was stored in the session storage then it will be removed automatically by ending the session.
+
+}
+
+
 //Reveal user window on click, with animation effect
 upperLoggedUser.addEventListener(`click`, revealUserWindow);
 function revealUserWindow() {
@@ -309,6 +326,7 @@ headerSignUpBtn.addEventListener(`click`, function () {
 });
 //#region //////////////////////////////////////////////////////////////////////////////////////// Nav bar
 // subsections.forEach((ss) => ss.classList.add("hidden"));
+const hero = document.querySelector(`.hero`)
 console.log(subsections)
 subsections.forEach((subS) => {
   // hide all subsections
@@ -323,8 +341,7 @@ subsections.forEach((subS) => {
       opacityBG.classList.remove(`hidden`); // reveal the overlay
       opacityBG.classList.add(`reveal-background-opacity`);
       // subS.style.height = `${subS.scrollHeight}px !important`
-      document.querySelector(`.hero`).style.transform = `translateY(${subS.clientHeight}px)` // translate the hero downward a space like the height of the subsection
-      animateHeight(subS);
+      if (hero) hero.style.transform = `translateY(${subS.clientHeight}px)` // translate the hero downward a space like the height of the subsection
 
     });
   }
@@ -335,7 +352,7 @@ subsections.forEach((subS) => {
       subS.classList.add('hidden')
       opacityBG.classList.add(`hidden`);
       // move it back the same amount of space , to respond to the transition effect on the way back
-      document.querySelector(`.hero`).style.transform = `translateY(${-subS.scrollHeight}px)` 
+    if (hero) { hero.style.transform = `translateY(${-subS.scrollHeight}px)`} 
 
     });
   }
@@ -409,7 +426,7 @@ userSignModal.innerHTML = ` <button id="close-icon" class="fa-solid fa-circle-xm
                     required>
                 <div class="remember-me">
                     <label>
-                        <input type="checkbox" name="">
+                        <input type="checkbox" name="" id = 'sign-in-remember-me'>
                         Remember me
                     </label>
                     <a href="reset-password.html"> <span> Forgot password? </span></a>
@@ -465,6 +482,7 @@ const signInBtn = document.querySelector(".sign-in-btn");
 const signUpBtn = document.querySelector(".sign-up-btn");
 const signInForm = document.querySelector(".sign-in-form");
 const signUpForm = document.querySelector(".sign-up-form");
+const rememberMeCheckbox = document.querySelector("#sign-in-remember-me");
 const signInSubmit = document.querySelector(".sign-in-submit");
 const signUpSubmit = document.querySelector(`.sign-up-submit`);
 const modalSignButtons = document.querySelectorAll(`.modal-sign-btns`);
@@ -646,10 +664,12 @@ document
 //#endregion signup
 //#region ///////////////////////////////////////////// Login
 
+
 document.querySelector(".sign-in-form").addEventListener("submit", (event) => {
   event.preventDefault();
+  // change the button's text to loading till the request succeed.
+console.log(rememberMeCheckbox.checked)
   signInSubmit.value = `loading...`;
-
   const email = document.querySelector('input[name="lemail"]').value;
   console.log(email);
   const password = document.querySelector('input[name="lpassword"]').value;
@@ -677,8 +697,9 @@ const loginUser = async (userData) => {
     );
 
     const data = await response.json();
+    let user = data.data
     // Handle the response from the backend
-    console.log(data);
+    console.log(user);
     if (!data.succeeded) {
       messageToUser.textContent = "Wrong Email or password was inserted";
       messageToUser.style.color = "red";
@@ -689,8 +710,10 @@ const loginUser = async (userData) => {
         signInSubmit.style.backgroundColor = "#0b5ed7";
       }, 3000);
 
-      // remove loader
-    } else {
+    } else { // If the request was succeeded
+      // save token to localStorage or sessionStorage depending on did hte user check or didn't check the box
+      let token = user.accessToken
+      rememberMeCheckbox.checked ? window.localStorage.setItem('token', `${token}`) : sessionStorage.setItem('token', `${token}`);
       messageToUser.textContent = `Welcome back ${"Name"}`; //put the name received from the server response
       messageToUser.style.color = "green";
       // hide the modal to keep the user in the current page
@@ -698,19 +721,30 @@ const loginUser = async (userData) => {
       //update the submit button
       signInSubmit.value = `Signed in`;
       signInSubmit.style.backgroundColor = "green";
-      // store token
-      window.localStorage.setItem(
-        "userInfo",
-        JSON.stringify({ name: "Ahmad Example" })
-      );
-      // Update header
-      upperSignBtns.classList.add(`hidden`);
-      upperLoggedUser.classList.remove(`hidden`);
     }
   } catch (error) {
     console.error("Error:", error);
   }
+
+  //  update header to Keep the user signed in as long the token is stored in the local storage or session storage
+  updateLoginUI()
+ // this process needs to be inside the function and at it's end so the header updates once the function is called and the request is done 
 };
+
+
+function updateLoginUI() {
+  // if the token is stored in local or session storage then update the header to show that the user is singed
+if (localStorage.getItem('token') || sessionStorage.getItem('token') ) {
+      upperSignBtns.classList.add(`hidden`);
+      upperLoggedUser.classList.remove(`hidden`);
+} else {
+  // otherwise update the header to show that the user is not signed in 
+  upperSignBtns.classList.remove(`hidden`);
+      upperLoggedUser.classList.add(`hidden`);
+}}
+
+
+
 //#endregion sign In
 
 //#endregion
@@ -929,3 +963,5 @@ function animateHeight(element) {
 }
 
 //#endregion
+
+// export  {revealSignInForm, signUpForm, signInForm, signUpBtn, signInBtn} ;

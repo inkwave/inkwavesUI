@@ -30,3 +30,10 @@ them in hte slider or in the gallery.
 /* 
 You can store an input's value into a variable to use it to assign it's value to other variables or use it in expressions, but to send a value back
 to this input you need  to use the input.value instead  */
+
+//refresh the page
+window.location.reload();
+// trying to toggle classes on an element wont't work if it already has a bootstrap class that contradicts this class
+/* In case of fetching a big set of data you might encounter performance issues like page not responding when trying to implement these data in the page, 
+that why you may need to use logics like pagination by getting only a part of data in shape of one page from the back end, the backend creates this login and you just
+call certain page and it's size, also you might need to use lazy loading to overcome this issue. */

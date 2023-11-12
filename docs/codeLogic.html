@@ -1,0 +1,26 @@
+<!-- 
+    ----------------- Keep user singed in 
+    -login the uer by sending the username and pass to the server to check if they are correct and stored there
+
+    - if they are the response comes back with success
+    - see if the user checked the remember me checkbox, if did then store the token in the localStorage otherwise in the sessionStorage
+    - store the code that will update the header once the user logs in in a function inside it see if the token is stored inside the local or session storage,
+     if is then update the user interface 
+    - call it inside the fetching function to update once the user logs 
+    - call this function once the page is reloaded too
+    - once the user clicks sign out remove the token from both local and session storage and refresh the page so the UI updating function updates the UI
+ -->
+
+ <!--
+    ---------------- Normal flow 
+    To prevent user from just pasting the path of a certain not-allowed page like http://127.0.0.1:5500/pages/checkout.html that is only allowed by
+    clicking the checkout page, then you need to create a key in the session storage in the js script where the button checkout exists , when it is clicked
+    move to the checkout page amd store this key talking a value true indicating that the user has moved to the checkout page using the checkout button,
+    there you need to create a function that one the page loads it checks if this key is not true means the user came to this page any way else, in this case don.t 
+    open the page or show a message to the user saying that this is not allowed.
+    we used the session storage and not the local storage because each tap has it's own session, this way when the user tries to paste the link of the checkout page to another
+    tap after opening the first tap using the button, the second tap will not see the key stored in the sessionStorage for this tap then the page doest open. 
+    also this way once the user closes the tap the sessionStorage is cleared automatically, that's how if the user wants to go back to the checkout page he/she needs to 
+    do that through the cart again
+
+  -->
