@@ -33,7 +33,7 @@ if (bookDetails) {
             </div>
 
         </div>
-         <!-- 
+         
         <div class="sub-images pt-1">
             <div class="sub-image active-sub-image"><img src="/assets/media/product-details/img-1.jpg"
                     alt=""></div>
@@ -45,7 +45,7 @@ if (bookDetails) {
             <div class="sub-image "><img src="/assets/media/product-details/img-1.jpg" alt=""></div>
          
         </div>
-        -->
+        
     </div>
     <div class="book-info ps-4">
         <div class="book-title-bookmar d-flex gap-3">
