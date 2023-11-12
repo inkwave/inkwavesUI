@@ -2047,6 +2047,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 /*  #endregion */
+<<<<<<< HEAD
 
 
 /*#region Print with options  */
@@ -2161,3 +2162,5 @@ height: 80%;
 /*  */
 
 /*#endregion */
+=======
+>>>>>>> 848d41d26849a4ec9d903fd041803cd2a6d972c3

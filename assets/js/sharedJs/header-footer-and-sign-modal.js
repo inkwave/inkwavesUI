@@ -43,7 +43,11 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
        <div class = "upper-logged-user d-flex justify-content-center align-items-center hidden"> 
          <div class = "user-in-header"> 
          <i class="fa-solid fa-circle-user user-account"></i>
+<<<<<<< HEAD
          
+=======
+      
+>>>>>>> 848d41d26849a4ec9d903fd041803cd2a6d972c3
          <div class = "user-window  ">
         <ul> 
 

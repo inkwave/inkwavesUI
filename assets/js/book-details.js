@@ -29,21 +29,23 @@ if (bookDetails) {
 <div class="book-representation p-3 d-flex">
     <div class="book-gallery">
         <div class="main-image-div">
-            <div class=" main-image w-100"><img src="/assets/media/product-details/img-1.jpg" alt="">
+            <div class=" main-image w-100"><img src="${bookDetails.image}" alt="">
             </div>
 
         </div>
+         
         <div class="sub-images pt-1">
             <div class="sub-image active-sub-image"><img src="/assets/media/product-details/img-1.jpg"
                     alt=""></div>
-            <div class="sub-image "><img src="/assets/media/product-details/img-2.jpg" alt=""></div>
+                     <div class="sub-image "><img src="/assets/media/product-details/img-2.jpg" alt=""></div>
             <div class="sub-image "><img src="/assets/media/product-details/img-3.jpg" alt=""></div>
             <div class="sub-image "><img src="/assets/media/product-details/img-4.jpg" alt=""></div>
             <div class="sub-image "><img src="/assets/media/product-details/img-2.jpg" alt=""></div>
             <div class="sub-image "><img src="/assets/media/product-details/img-3.jpg" alt=""></div>
             <div class="sub-image "><img src="/assets/media/product-details/img-1.jpg" alt=""></div>
-
+         
         </div>
+        
     </div>
     <div class="book-info ps-4">
         <div class="book-title-bookmar d-flex gap-3">
