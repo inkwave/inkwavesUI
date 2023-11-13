@@ -43,11 +43,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
        <div class = "upper-logged-user d-flex justify-content-center align-items-center hidden"> 
          <div class = "user-in-header"> 
          <i class="fa-solid fa-circle-user user-account"></i>
-<<<<<<< HEAD
-         
-=======
-      
->>>>>>> 848d41d26849a4ec9d903fd041803cd2a6d972c3
+         <h2 id="userFullName"> </h2>
          <div class = "user-window  ">
         <ul> 
 
@@ -718,7 +714,15 @@ const loginUser = async (userData) => {
       // save token to localStorage or sessionStorage depending on did hte user check or didn't check the box
       let token = user.accessToken
       rememberMeCheckbox.checked ? window.localStorage.setItem('token', `${token}`) : sessionStorage.setItem('token', `${token}`);
-      messageToUser.textContent = `Welcome back ${"Name"}`; //put the name received from the server response
+      const response=   await fetch('http://webstercassin1-001-site1.ftempurl.com/api/Users/GetMyInfo', {
+        headers: {Authorization: 'Bearer '+sessionStorage.getItem('token')}
+      }); 
+      const data = await response.json();
+      let userInfo =data.data;
+      console.log(userInfo)
+      let fullName=userInfo.firstName+' '+ userInfo.lastName;
+      rememberMeCheckbox.checked ? window.localStorage.setItem('userFullName', `${fullName}`) : sessionStorage.setItem('userFullName', `${fullName}`);
+      messageToUser.textContent = `Welcome back ${fullName}`; //put the name received from the server response
       messageToUser.style.color = "green";
       // hide the modal to keep the user in the current page
       setTimeout(closeModal, 2000);
